@@ -1,0 +1,29 @@
+.main {
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: aqua;
+    text-align: start;
+    width: 100%;
+    height: 100%;
+
+    .input-Field {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: left;
+        background-color: brown;
+        text-align: start;
+        label{
+            text-align: start; 
+        }
+    }
+}
+}

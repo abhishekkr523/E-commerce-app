@@ -1,0 +1,40 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    h1{
+        width: 20%;
+        padding-left: 40px;
+        color: violet;
+        font-size: 26px;
+    }
+    .search{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+        height: 27px;
+        border: 2px solid violet;
+        input{
+            width: 75%;
+            border: transparent;
+        }
+        button{
+            color: violet;
+            border: none;
+        }
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+        width: 20%;
+        padding-right: 40px;
+        li{
+            color: violet;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+{
+  "seller": [
+    {
+      "id": "f39a",
+      "name": "abhishek",
+      "email": "ggh@gmail.com"
+    },
+    {
+      "id": "872c",
+      "name": "abhishek",
+      "email": "ggh@gmail.com"
+    },
+    {
+      "id": "4fa4",
+      "name": "abhishek",
+      "email": "ggh@gmail.com"
+    },
+    {
+      "id": "4f78",
+      "name": "abhishek",
+      "email": "ggh@gmail.com"
+    },
+    {
+      "id": "4ac5",
+      "name": "abhishek kr",
+      "email": "ggh@gmail.com"
+    },
+    {
+      "id": "0af1",
+      "name": "abhishek kr",
+      "email": "ggh@gmail.com",
+      "passwoed": "1234"
+    },
+    {
+      "id": "97ed",
+      "email": "ggh@gmail.com",
+      "name": "abhishek kr",
+      "passwoed": "1234"
+    },
+    {
+      "id": "a4bc",
+      "email": "ggoooooh@gmail.com",
+      "name": "abhishek kr",
+      "passwoed": "1234"
+    }
+  ]
+}
