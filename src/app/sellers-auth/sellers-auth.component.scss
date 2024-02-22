@@ -1,29 +1,50 @@
 .main {
-    width: 50vw;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-form{
+    width: 35vw;
+    height: 45vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    background-color: aqua;
-    text-align: start;
-    width: 100%;
-    height: 100%;
+    justify-content: center;
 
-    .input-Field {
+    p {
+        color: red;
+    }
+
+    h2 {
+        color: violet;
+    }
+
+    form {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: left;
-        background-color: brown;
+        justify-content: space-around;
         text-align: start;
-        label{
-            text-align: start; 
+        width: 100%;
+        height: 100%;
+
+        .input-field {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            background-color: brown;
+            text-align: start;
+            width: 100%;
+
+            input {
+                width: 100%;
+                height: 25px;
+                border: 2px solid violet;
+                padding-left: 20px;
+            }
+        }
+
+        button {
+            color: violet;
+        }
+
+        a {
+            color: violet;
         }
     }
-}
 }

@@ -1,17 +1,32 @@
-<div class="main">
-    <form #userForm="ngForm" (ngSubmit)="signUp(userForm.value)" class="example-form">
+<div *ngIf="!showLogin" class="main">
+    <h2>Seller sign-up</h2>
+    <form #data="ngForm" (ngSubmit)="signUp(data.value)" class="example-form">
         <div class="input-field">
-            <label for="">First name</label>
-            <input ngModel name="name">
+            <input ngModel name="name" placeholder="Enter Name">
         </div>
         <div class="input-field">
-            <label for="">Email</label>
-            <input type="email" placeholder="Ex. pat@example.com" ngModel name="email">
+            <input type="email" placeholder="Enter Email" ngModel name="email">
         </div>
         <div class="input-field">
-            <label for="">Password</label>
-            <input type="password" placeholder="password" ngModel name="password">
+            <input type="password" placeholder="Enter Password" ngModel name="password">
         </div>
-        <button type="submit">Sign Up</button>
+        <button type="submit" style="border: 2px solid violet; width: 100%;height: 28px;">Sign Up</button>
+        <a (click)="openLogin()">Already have account? Click to login</a>
+    </form>
+</div>
+
+
+<div *ngIf="showLogin" class="main" style="height: 38vh;">
+    <h2>Seller Login</h2>
+    <p>{{authError}}</p>
+    <form #sellerLogin="ngForm" (ngSubmit)="login(sellerLogin.value)" class="example-form">
+        <div class="input-field">
+            <input type="email" placeholder="Enter Email" ngModel name="email">
+        </div>
+        <div class="input-field">
+            <input type="password" placeholder="Enter Password" ngModel name="password">
+        </div>
+        <button type="submit" style="border: 2px solid violet; width: 100%;height: 28px;">Log In</button>
+        <a (click)="openSignUp()">Don't have account? Click to Sign-Up</a>
     </form>
 </div>
