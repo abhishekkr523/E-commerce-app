@@ -1,40 +1,59 @@
-nav{
+nav {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100vw;
-    h1{
+    margin: 0%;
+
+    h1 a{
         width: 20%;
         padding-left: 40px;
         color: violet;
         font-size: 26px;
+        text-decoration: none;
     }
-    .search{
+
+    .search {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 60%;
+        width: 40%;
         height: 27px;
         border: 2px solid violet;
-        input{
-            width: 75%;
+        margin-left: 40px;
+
+        input {
+            width: 65%;
             border: transparent;
         }
-        button{
+
+        button {
             color: violet;
             border: none;
         }
     }
-    ul{
+
+    .menu {
         display: flex;
         align-items: center;
-        justify-content: space-around;
-        list-style: none;
-        width: 20%;
-        padding-right: 40px;
-        li{
-            color: violet;
-            cursor: pointer;
+        justify-content: space-between;
+        width: 40%;
+margin: 0%;
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            list-style: none;
+            width: 100%;
+            margin: 0px;
+
+            li {
+                color: violet;
+                cursor: pointer;
+            }
         }
     }
+}
+.seller{
+    width:50%
 }

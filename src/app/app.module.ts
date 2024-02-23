@@ -12,6 +12,11 @@ import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
+import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+// import{NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,9 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
     HomeComponent,
     HeaderComponent,
     SellersAuthComponent,
-    SellerHomeComponent
+    SellerHomeComponent,
+    SellerAddProductComponent,
+    SellerUpdateProductComponent
     
   ],
   imports: [
@@ -30,6 +37,8 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
     MatButtonModule,
     FormsModule,
     HttpClientModule,
+    FontAwesomeModule,
+    NgbModule,
     
   ],
   providers: [
