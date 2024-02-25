@@ -2,3 +2,12 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+background-color: black;
+border: 5px;
+}
+.carousel-caption {
+    background-color: rgba(161, 159, 159, 0.7); 
+}

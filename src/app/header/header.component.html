@@ -1,8 +1,12 @@
 <nav>
     <h1><a routerLink="/">E-Comm</a></h1>
     <div *ngIf="menuType==='default'" class="search">
-        <input type="text" placeholder="Search for product">
+        <input (keyup)="searchProduct($event)" type="text" placeholder="Search for product">
         <button>Search</button>
+        <!-- <ul>
+            <li *ngFor="let item of searchResult">
+            <a href="">{{item}}</a></li>
+        </ul> -->
     </div>
     <div class="menu" [ngSwitch]="menuType" >
         <ul *ngSwitchCase="'default'">
