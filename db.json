@@ -23,6 +23,12 @@
       "name": "",
       "email": "",
       "password": ""
+    },
+    {
+      "id": "c8a8",
+      "name": "aa",
+      "email": "aa",
+      "password": "123"
     }
   ],
   "product": [
@@ -88,6 +94,86 @@
       "category": "jhb",
       "discription": "jbjh",
       "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": "3f35",
+      "name": "jhgw",
+      "email": "w",
+      "password": "111"
+    },
+    {
+      "id": "cbb6",
+      "name": "hh",
+      "email": "jjn",
+      "password": "nj"
+    },
+    {
+      "id": "4ab7",
+      "name": "aa",
+      "email": "aa",
+      "password": "aa"
+    },
+    {
+      "id": "6bcf",
+      "name": "dds",
+      "email": "dd",
+      "password": "csd"
+    },
+    {
+      "id": "a733",
+      "name": "ss",
+      "email": "a",
+      "password": "22"
+    },
+    {
+      "id": "1413",
+      "name": "pp",
+      "email": "pp",
+      "password": "pp"
+    },
+    {
+      "id": "1291",
+      "name": "zzz",
+      "email": "zz",
+      "password": "z"
+    },
+    {
+      "id": "add0",
+      "name": "sss",
+      "email": "s",
+      "password": "ss"
+    },
+    {
+      "id": "64d3",
+      "name": "xxx",
+      "email": "xx",
+      "password": "x"
+    },
+    {
+      "id": "877a",
+      "name": "sssss",
+      "email": "a",
+      "password": "a"
+    },
+    {
+      "id": "645a",
+      "name": "ddd",
+      "email": "d",
+      "password": "dd"
+    },
+    {
+      "id": "5bdd",
+      "name": "ss",
+      "email": "ss",
+      "password": "ss"
+    },
+    {
+      "id": "9a10",
+      "name": "abhi",
+      "email": "abhi@123",
+      "password": "123"
     }
   ]
 }

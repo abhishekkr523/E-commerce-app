@@ -16,7 +16,14 @@
         <ul *ngSwitchCase="'default'">
             <li routerLink="">Home</li>
             <li routerLink="seller">Seller</li>
-            <li>Login</li>
+            <li> <a routerLink="/user-auth"> Login/signUp</a></li>
+            <li>Cart(0)</li>
+        </ul>
+        <ul *ngSwitchCase="'user'">
+            <li routerLink="">Home</li>
+            <li routerLink="">{{userName | titlecase}}</li>
+            <li routerLink="seller">Seller</li>
+            <li> <a (click)="userLogout()" routerLink="/user-auth">Logout</a></li>
             <li>Cart(0)</li>
         </ul>
         <ul class="seller" *ngSwitchCase="'seller'">

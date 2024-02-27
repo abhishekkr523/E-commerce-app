@@ -6,6 +6,10 @@ footer {
     align-items: center;
     justify-content: space-around;
     margin-top: 40px;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    // left: 0;
 
     .sections {
         width: 100vw;

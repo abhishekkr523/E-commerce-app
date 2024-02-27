@@ -14,8 +14,9 @@
 
 <div class="product-list-wrapper">
 	<h1>Trendy Products</h1>
+	<div class="container-fluid">
 	<div class="row">
-		<div class="col-sm-2" *ngFor="let item of trendyProduct">
+		<div class="col-sm-3" *ngFor="let item of trendyProduct">
 			<div class="product-item">
 				<a routerLink="/product-details/{{item.id}}">
 					<img [src]="item.url" alt="">
@@ -36,4 +37,5 @@
 			</div>
 		</div>
 	</div>
+</div>
 </div>
