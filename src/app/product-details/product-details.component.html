@@ -1,0 +1,29 @@
+<div class="container" *ngIf="productData">
+    <div class="product-item">
+        <a routerLink="/product-details/{{productData.id}}">
+            <img [src]="productData.url" alt="">
+        </a>
+
+        <div class="product-details">
+            <a routerLink="/product-details/{{productData.id}}">
+                <h6 class="name-head">{{productData.name}}</h6>
+            </a>
+            <h6 style="color: black;">Price:{{productData.price}}</h6>
+            <div class="color">
+                <h6>Color: </h6>
+                <h6 class="circle" [style.backgroundColor]="productData.color"></h6>
+            </div>
+            <h6>Category:{{productData.category}}</h6>
+            <h6>{{productData.discription}}</h6>
+            <div class="action">
+                <button>Add to Cart</button>
+                <button>Buy Now</button>
+            </div>
+            <div class="quantity-group">
+                <button (click)="handelQuantity('minus')">-</button>
+                <input type="text" value="{{productQuantity}}">
+                <button (click)="handelQuantity('plus')">+</button>
+            </div>
+        </div>
+    </div>
+</div>

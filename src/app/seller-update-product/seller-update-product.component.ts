@@ -35,4 +35,8 @@ export class SellerUpdateProductComponent implements OnInit {
       this.productMessage = undefined;
     }, 3000)
   }
+  redirect(){
+    // this.route.navigate(['/home/'])
+  }
+  
 }

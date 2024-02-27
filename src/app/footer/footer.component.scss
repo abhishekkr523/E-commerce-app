@@ -1,0 +1,27 @@
+footer {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+
+    .sections {
+        width: 100vw;
+    height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        color: violet;
+
+        h5 {
+            font-size: 16px;
+            // padding: ;
+        }
+    }
+
+    p {
+        color: black
+    }
+}

@@ -31,6 +31,9 @@ nav {
             color: violet;
             border: none;
         }
+        ul li{
+            border: 1px solid #ddd;
+        }
     }
 
     .menu {
@@ -56,4 +59,20 @@ margin: 0%;
 }
 .seller{
     width:50%
+}
+.suggested-result{
+    position: absolute;
+    // display: list-item;
+    list-style: none;
+    z-index: 10;
+    background-color: #fff;
+    width: 300px;
+    top: 40px;
+    border: 1px solid #ddd;
+}
+input:focus {
+    outline: none;
+}
+a{
+    cursor: pointer;
 }

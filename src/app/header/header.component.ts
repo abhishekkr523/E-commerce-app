@@ -10,7 +10,7 @@ import { ProductService } from '../services/product.service';
 export class HeaderComponent implements OnInit {
   menuType: string = 'default';
   sellerName: string = "";
-  searchResult: string = 'default';
+  searchResult : any[] | undefined;
 
   constructor(private route: Router, private product: ProductService) {
   }
@@ -51,4 +51,17 @@ export class HeaderComponent implements OnInit {
       })
     }
   }
+  hideSearch(){
+    this.searchResult=undefined;
+  }
+
+
+  submitSearch(val: any) {
+    console.log("kk", val);
+    this.route.navigate([`search/${val}`]); // Use backticks for string interpolation
+}
+
+reDirectToDetails(val:number){
+  this.route.navigate(['/product-details/'+val])
+}
 }
