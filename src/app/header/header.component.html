@@ -1,13 +1,13 @@
 <nav>
-    <h1><a routerLink="/">E-Comm</a></h1>
+    <a routerLink="/"><img src="./assets/logo.png" alt=""></a>
     <div *ngIf="menuType==='default'" class="search">
         <input #searchInput (keyup)="searchProduct($event)" (blur)="hideSearch()" type="text"
-            placeholder="Search for product">
+            placeholder="Search for product, brands and more">
         <button (click)="submitSearch(searchInput.value)">Search</button>
         <ul class="suggested-result" *ngIf="searchResult">
             <li *ngFor="let item of searchResult">
                 <a (mousedown)="reDirectToDetails(item.id)">
-               {{item.name}}
+                    {{item.name}}
                 </a>
             </li>
         </ul>
@@ -17,19 +17,19 @@
             <li routerLink="">Home</li>
             <li routerLink="seller">Seller</li>
             <li> <a routerLink="/user-auth"> Login/signUp</a></li>
-            <li>Cart(0)</li>
+            <li>Cart({{cartItem}})</li>
         </ul>
         <ul *ngSwitchCase="'user'">
-            <li routerLink="">Home</li>
+            <li routerLink="/">Home</li>
             <li routerLink="">{{userName | titlecase}}</li>
-            <li routerLink="seller">Seller</li>
+            <!-- <li routerLink="seller">Seller</li> -->
             <li> <a (click)="userLogout()" routerLink="/user-auth">Logout</a></li>
-            <li>Cart(0)</li>
+            <li>Cart({{cartItem}})</li>
         </ul>
         <ul class="seller" *ngSwitchCase="'seller'">
             <li routerLink="sellerAddProduct">Add product</li>
             <li routerLink="seller-home">List</li>
-            <li (click)="logout()">Logout</li>
+            <li (click)="sellerLogout()">Logout</li>
             <li>{{sellerName | titlecase}}</li>
         </ul>
     </div>

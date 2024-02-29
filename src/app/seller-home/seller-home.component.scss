@@ -1,16 +1,38 @@
-table {
-    text-align: left;
-    color: #ee82ee;
-    border-collapse: collapse;
-    th, td {
-        border: 2px solid violet;
-        padding: 10px;
-        min-height: 160px;
-    }
-}
-img{
-    width: 100px;
-    width: 100px;
+.product-list {
+    width: 100vw;
+    padding: 20px;
+    // max-width: 100%;
+    overflow-x: auto; /* Add horizontal scroll for smaller screens */
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+img {
+    max-width: 100px;
+    height: auto;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        font-size: 12px; 
+    }
+
+    img {
+        max-width: 60px; 
+    }
+}
 

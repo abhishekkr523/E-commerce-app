@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from '../services/user.service';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-user-auth',
@@ -10,7 +11,7 @@ export class UserAuthComponent {
   showLogin = false;
   authError: string = "";
 
-  constructor(private user: UserService) {
+  constructor(private user: UserService, private product:ProductService) {
   }
   dat: any
   ngOnInit(): void {
@@ -24,11 +25,10 @@ export class UserAuthComponent {
     this.authError = ""
     console.log("logindata", data);
     this.user.userLogin(data);
-    // this.user.isLoginError.subscribe((isError) => {
-    //   if (isError) {
-    //     this.authError = "Email and Password is not correct"
-    //   }
-    // })
+    
+
+    this.localCartToRemoteCart()
+
   }
   openLogin() {
     this.showLogin = true
@@ -37,6 +37,29 @@ export class UserAuthComponent {
     this.showLogin = false
   }
 
+  localCartToRemoteCart(){
+    let data= localStorage.getItem('localCart');
+    if(data){
+      let cartDataList:any[]=JSON.parse(data);
+      let user=localStorage.getItem('user');
+      let userId=user && JSON.parse(user).id;
+      cartDataList.forEach((product:any,index)=>{
+        let cartData:any={
+          ...product,
+          productId:product.id,userId,
+        };
+        delete cartData.id;
+        setTimeout(() => {
+          this.product.addToCart(cartData).subscribe((result)=>{
+            if(result){
+console.log("item store in db.")
+            }
+          })
+        }, 500);
+      })
+    }
+    
+  }
   
 }
 

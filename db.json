@@ -29,6 +29,12 @@
       "name": "aa",
       "email": "aa",
       "password": "123"
+    },
+    {
+      "id": "2f6b",
+      "name": "abhi",
+      "email": "aa",
+      "password": "aa"
     }
   ],
   "product": [
@@ -36,16 +42,16 @@
       "id": "4929",
       "name": "i phone",
       "price": "grd",
-      "color": "dfgdr",
+      "color": "blue",
       "category": "dgdrgfv",
       "discription": "gddgrerbtrdgfr",
       "url": "https://imobilecolombia.com/wp-content/uploads/2019/10/iphone-11-pro-max-gold-select-2019-1-768x909.png"
     },
     {
       "id": "df14",
-      "name": "gvhgc",
+      "name": "i phone 6",
       "price": "nvg",
-      "color": "jhgj",
+      "color": "yellow",
       "category": "jgjyh",
       "discription": "jgj",
       "url": "https://telecomtalk.info/wp-content/uploads/2022/09/how-you-can-buy-iphone-14-under-1024x683.jpg"
@@ -54,7 +60,7 @@
       "id": "f036",
       "name": "gfdkhiguvubighiygnjih",
       "price": "ghdfc",
-      "color": "fdz",
+      "color": "gray",
       "category": "fdx",
       "discription": "dsz",
       "url": "https://d28i4xct2kl5lp.cloudfront.net/product_images/1573710978.49.jpg"
@@ -72,7 +78,7 @@
       "id": "90f2",
       "name": "iphone 13 pro",
       "price": "150000",
-      "color": "gold",
+      "color": "brown",
       "category": "cell phone",
       "discription": "uygy jhbv jhi jubi jbi jbni",
       "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg"
@@ -94,86 +100,88 @@
       "category": "jhb",
       "discription": "jbjh",
       "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg"
+    },
+    {
+      "id": "7d39",
+      "name": "iphone 13 pro",
+      "price": "150000",
+      "color": "brown",
+      "category": "cell phone",
+      "discription": "uygy jhbv jhi jubi jbi jbni",
+      "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg",
+      "quantity": 1,
+      "userId": "4ab7",
+      "productId": "90f2"
     }
   ],
   "users": [
     {
-      "id": "3f35",
-      "name": "jhgw",
-      "email": "w",
-      "password": "111"
-    },
-    {
-      "id": "cbb6",
-      "name": "hh",
-      "email": "jjn",
-      "password": "nj"
-    },
-    {
-      "id": "4ab7",
-      "name": "aa",
-      "email": "aa",
-      "password": "aa"
-    },
-    {
-      "id": "6bcf",
-      "name": "dds",
-      "email": "dd",
-      "password": "csd"
-    },
-    {
-      "id": "a733",
-      "name": "ss",
-      "email": "a",
-      "password": "22"
-    },
-    {
-      "id": "1413",
-      "name": "pp",
-      "email": "pp",
-      "password": "pp"
-    },
-    {
-      "id": "1291",
-      "name": "zzz",
-      "email": "zz",
-      "password": "z"
-    },
-    {
-      "id": "add0",
-      "name": "sss",
-      "email": "s",
-      "password": "ss"
-    },
-    {
-      "id": "64d3",
-      "name": "xxx",
-      "email": "xx",
-      "password": "x"
-    },
-    {
-      "id": "877a",
-      "name": "sssss",
-      "email": "a",
-      "password": "a"
-    },
-    {
-      "id": "645a",
-      "name": "ddd",
-      "email": "d",
-      "password": "dd"
-    },
-    {
-      "id": "5bdd",
-      "name": "ss",
-      "email": "ss",
-      "password": "ss"
-    },
-    {
-      "id": "9a10",
-      "name": "abhi",
-      "email": "abhi@123",
+      "id": "2013",
+      "name": "abhishek",
+      "email": "abc",
       "password": "123"
+    }
+  ],
+  "cart": [
+    {
+      "id": "95df",
+      "name": "gfdkhiguvubighiygnjih",
+      "price": "ghdfc",
+      "color": "gray",
+      "category": "fdx",
+      "discription": "dsz",
+      "url": "https://d28i4xct2kl5lp.cloudfront.net/product_images/1573710978.49.jpg",
+      "quantity": 1,
+      "productId": "f036",
+      "userId": null
+    },
+    {
+      "id": "d6d5",
+      "name": "i phone",
+      "price": "grd",
+      "color": "blue",
+      "category": "dgdrgfv",
+      "discription": "gddgrerbtrdgfr",
+      "url": "https://imobilecolombia.com/wp-content/uploads/2019/10/iphone-11-pro-max-gold-select-2019-1-768x909.png",
+      "quantity": 4,
+      "productId": "4929",
+      "userId": null
+    },
+    {
+      "id": "cda2",
+      "name": "gfdkhiguvubighiygnjih",
+      "price": "ghdfc",
+      "color": "gray",
+      "category": "fdx",
+      "discription": "dsz",
+      "url": "https://d28i4xct2kl5lp.cloudfront.net/product_images/1573710978.49.jpg",
+      "quantity": 1,
+      "productId": "f036",
+      "userId": null
+    },
+    {
+      "id": "efe8",
+      "name": "gfdkhiguvubighiygnjih",
+      "price": "ghdfc",
+      "color": "gray",
+      "category": "fdx",
+      "discription": "dsz",
+      "url": "https://d28i4xct2kl5lp.cloudfront.net/product_images/1573710978.49.jpg",
+      "quantity": 1,
+      "productId": "f036",
+      "userId": null
+    },
+    {
+      "id": "0d06",
+      "name": "iphone 12",
+      "price": "120000",
+      "color": "white",
+      "category": "cell phone",
+      "discription": "knjjj jbn kj kn  kjjknkj",
+      "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg",
+      "quantity": 1,
+      "userId": "2013",
+      "productId": "734e"
     }
   ]
 }

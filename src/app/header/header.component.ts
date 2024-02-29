@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
   sellerName: string = "";
   searchResult: any[] | undefined;
   userName: any;
+  cartItem=0;
 
   constructor(private route: Router, private product: ProductService) {
   }
@@ -39,9 +40,18 @@ export class HeaderComponent implements OnInit {
       }
 
     })
+
+    let cartData=localStorage.getItem('localCart');
+    if(cartData){
+      this.cartItem=JSON.parse(cartData).length;
+    }
+
+    this.product.cartData.subscribe((result)=>{
+      this.cartItem=result.length;
+    })
   }
 
-  logout() {
+  sellerLogout() {
     localStorage.removeItem('seller');
     this.route.navigate(['/'])
   }
