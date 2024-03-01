@@ -37,7 +37,10 @@ export class ProductDetailsComponent implements OnInit {
         let userId = user && JSON.parse(user).id;
         this.product.getCartList(userId);
         this.product.cartData.subscribe((result) => {
-          let item = result.filter((item: any) => productId?.toString() === item.producId.toString());
+          // let item = result.filter((item: any) => productId?.toString() === item.producId.toString());
+          let item = result.filter((item: any) => item && productId && item.id && item.producId && productId === item.id.toString() && item.producId.toString());
+
+          
           if (item.length) {
             this.cartData = item[0]
             this.removeCart = true;
@@ -66,7 +69,7 @@ export class ProductDetailsComponent implements OnInit {
         let user = localStorage.getItem('users');
         let userId = user && JSON.parse(user).id;
         let cartData: any = { ...this.productData, userId, productId: this.productData.id, }
-        console.log("jjj", cartData)
+        console.log("jjj", cartData);
         delete cartData.id;
         this.product.addToCart(cartData).subscribe((result) => {
           if (result) {
@@ -85,12 +88,10 @@ export class ProductDetailsComponent implements OnInit {
       this.product.removeItemFromCart(producId);
       
     } else {
-      let user = localStorage.getItem('users');
-      let userId = user && JSON.parse(user).id;
-      this.cartData && this.product.removeToCart(this.cartData.id).subscribe((result) => {
-        if (result) {
-          this.product.getCartList(userId);
-        }
+      this.cartData && this.product.removeToCart(this.cartData.id).subscribe((result)=>{
+        let user = localStorage.getItem('users');
+        let userId = user && JSON.parse(user).id;
+        this.product.getCartList(userId);
       })
       this.removeCart = false;
     }

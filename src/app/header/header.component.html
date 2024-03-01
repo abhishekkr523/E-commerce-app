@@ -1,6 +1,6 @@
 <nav>
     <a routerLink="/"><img src="./assets/logo.png" alt=""></a>
-    <div *ngIf="menuType==='default'" class="search">
+    <div *ngIf="menuType==='default' || menuType==='user'" class="search">
         <input #searchInput (keyup)="searchProduct($event)" (blur)="hideSearch()" type="text"
             placeholder="Search for product, brands and more">
         <button (click)="submitSearch(searchInput.value)">Search</button>
@@ -23,8 +23,9 @@
             <li routerLink="/">Home</li>
             <li routerLink="">{{userName | titlecase}}</li>
             <!-- <li routerLink="seller">Seller</li> -->
+            <li> <a routerLink="/my-orders">MY Order</a></li>
             <li> <a (click)="userLogout()" routerLink="/user-auth">Logout</a></li>
-            <li> <a routerLink="/cart-page">Cart({{cartItem}})</a></li>
+            <li> <a [routerLink]="cartItem>0?'/cart-page':null">Cart({{cartItem}})</a></li>
         </ul>
         <ul class="seller" *ngSwitchCase="'seller'">
             <li routerLink="sellerAddProduct">Add product</li>

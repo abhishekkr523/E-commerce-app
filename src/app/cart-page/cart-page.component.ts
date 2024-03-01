@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart-page',
@@ -7,48 +8,53 @@ import { ProductService } from '../services/product.service';
   styleUrl: './cart-page.component.scss'
 })
 export class CartPageComponent implements OnInit {
-cartData:any[] | undefined;
-cartSummary:any={
-  price:0,
-  diacount:0,
-  tax:0,
-  delivery:0,
-  total:0,
-}
+  cartData: any[] | undefined;
+  cartSummary: any = {
+    price: 0,
+    diacount: 0,
+    tax: 0,
+    delivery: 0,
+    total: 0,
+  }
 
-constructor(private product:ProductService){
+  constructor(private product: ProductService,private router:Router) {
 
-}
-// ngOnInit(): void {
-//   this.product.currentCard().subscribe((result)=>{
-//     this.cartData=result;
-//     let price=0;
-//     result.forEach((item)=>{price + +item.price});
-//     this.cartSummary.price=price;
+  }
+  ngOnInit(): void {
+    this.loadDetails();
+  }
 
-//     console.log("price",this.cartSummary.price)
-//     this.cartSummary.discount=price/10;
-//     this.cartSummary.tax=price/10;
-//     this.cartSummary.delivery/100;
-//     this.cartSummary.total=price+(price/10)+100-(price/10);
-//     console.log("yyy",this.cartSummary)
-//   })
-// }
-ngOnInit(): void {
-  this.product.currentCard().subscribe((result) => {
-    this.cartData = result;
-    console.log("result",result)
-    let price = 0;
-    result.forEach((item) => { price += (+item.price * item.quantity); });
-    this.cartSummary.price = price;
+  checkout(){
+    this.router.navigate(['/checkout'])
+  }
 
-    console.log("price", this.cartSummary.price);
-    this.cartSummary.discount = price / 10;
-    this.cartSummary.tax = price / 20;
-    this.cartSummary.delivery = price/50; 
-    this.cartSummary.total = this.cartSummary.price - this.cartSummary.discount +this.cartSummary.tax + this.cartSummary.delivery;
-    console.log("cartsummary",this.cartSummary)
-  });
-}
+  removeToCart(cartId:number|undefined){
+    cartId && this.cartData && this.product.removeToCart(cartId).subscribe((result)=>{
+      let user = localStorage.getItem('users');
+      let userId = user && JSON.parse(user).id;
+      this.product.getCartList(userId);
+      this.loadDetails();
+    })
+  }
+
+  loadDetails(){
+    this.product.currentCard().subscribe((result) => {
+      this.cartData = result;
+      console.log("result", result)
+      let price = 0;
+      result.forEach((item) => { price += (+item.price * item.quantity); });
+      this.cartSummary.price = price;
+
+      console.log("price", this.cartSummary.price);
+      this.cartSummary.discount = price / 10;
+      this.cartSummary.tax = price / 20;
+      this.cartSummary.delivery = price / 50;
+      this.cartSummary.total = this.cartSummary.price - this.cartSummary.discount + this.cartSummary.tax + this.cartSummary.delivery;
+      console.log("cartsummary", this.cartSummary);
+      if(!this.cartData.length){
+        this.router.navigate(['/'])
+      }
+    });
+  }
 
 }

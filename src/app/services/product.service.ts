@@ -75,13 +75,30 @@ export class ProductService {
 
   }
 
-  removeToCart(cartId:number){
-    return this.http.delete('http://localhost:3000/cart/'+cartId);
+  removeToCart(cartId: number) {
+    return this.http.delete('http://localhost:3000/cart/' + cartId);
   }
-  currentCard(){
+  currentCard() {
     let userStore = localStorage.getItem('users');
     let userData = userStore && JSON.parse(userStore);
     return this.http.get<any[]>('http://localhost:3000/cart?userId=' + userData.id)
   }
-
+  order(data: any) {
+    return this.http.post<any>('http://localhost:3000/order', data)
+  }
+  orderList() {
+    let userStore = localStorage.getItem('users');
+    let userData = userStore && JSON.parse(userStore);
+    return this.http.get<any>('http://localhost:3000/order?userId=' + userData.id)
+  }
+  deleteCartItems(cartId:number){
+    return this.http.delete('http://localhost:3000/cart/' + cartId,{observe:'response'}).subscribe((result)=>{
+      if(result){
+        this.cartData.emit([])
+      }
+    });
+  }
+  cancelOrder(orderId:number){
+    return this.http.delete('http://localhost:3000/order/'+orderId)
+  }
 }

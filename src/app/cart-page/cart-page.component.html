@@ -13,7 +13,7 @@
                 <li><span>Price:{{cart.price}}</span></li>
                 <li><span> Quantity:{{cart.quantity}}</span></li>
                 <li>
-                    <button class="form-button">Remove to cart</button>
+                    <button class="form-button" (click)="removeToCart(cart.id)">Remove to cart</button>
                 </li>
             </div>
         </ul>
@@ -38,8 +38,13 @@
                 <span>
                     <h4>Total</h4>
                 </span>
-                <span><h4>{{cartSummary.total}}</h4></span>
+                <span>
+                    <h4>{{cartSummary.total}}</h4>
+                </span>
 
+            </li>
+            <li style="display: flex; align-items: center; justify-content: center;">
+                <button class="form-button" (click)="checkout()">Checkout</button>
             </li>
         </ul>
     </div>

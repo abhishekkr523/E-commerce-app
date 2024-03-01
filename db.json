@@ -160,112 +160,41 @@
   ],
   "cart": [
     {
-      "id": "50e1",
-      "name": "puma shoes",
-      "price": "3200",
-      "color": "black",
-      "category": "shoes",
-      "discription": "running shoes for men",
-      "url": "https://cdna.lystit.com/photos/puma/1001e715/puma-Charcoal-Gray-Blazing-Yellow-Axelion-Mesh-Mens-Training-Shoes.jpeg",
-      "quantity": 1,
-      "userId": "2013",
-      "productId": "81ca"
-    },
-    {
-      "id": "45d8",
-      "name": "i phone 12 pro",
-      "price": "120000",
-      "color": "gray",
-      "category": "cell phone",
-      "discription": "Apple iPhone 12 pro (128GB) - gray",
-      "url": "https://d28i4xct2kl5lp.cloudfront.net/product_images/1573710978.49.jpg",
-      "quantity": 1,
-      "userId": "2013",
-      "productId": "f036"
-    },
-    {
-      "id": "0420",
-      "name": "i phone 12 pro",
-      "price": "120000",
-      "color": "gray",
-      "category": "cell phone",
-      "discription": "Apple iPhone 12 pro (128GB) - gray",
-      "url": "https://d28i4xct2kl5lp.cloudfront.net/product_images/1573710978.49.jpg",
-      "quantity": 1,
-      "userId": "2013",
-      "productId": "f036"
-    },
-    {
-      "id": "3621",
-      "name": "i phone 12 pro",
-      "price": "120000",
-      "color": "gray",
-      "category": "cell phone",
-      "discription": "Apple iPhone 12 pro (128GB) - gray",
-      "url": "https://d28i4xct2kl5lp.cloudfront.net/product_images/1573710978.49.jpg",
-      "quantity": 1,
-      "userId": "2013",
-      "productId": "f036"
-    },
-    {
-      "id": "f053",
-      "name": "sports shoes",
-      "price": "2000",
-      "color": "black",
-      "category": "shoes",
-      "discription": "Comfortable & Stylish Shoes - shoes'",
-      "url": "https://www.lehighoutfitters.com/on/demandware.static/-/Sites-Master-Product-catalog-en/default/dw91cb056d/images/76553BKBL_EXTRALARGE.jpg",
-      "quantity": 1,
-      "userId": "2013",
-      "productId": "07d4"
-    },
-    {
-      "id": "d290",
-      "name": "sports shoes",
-      "price": "1000",
-      "color": "black",
-      "category": "shoes",
-      "discription": "Comfortable & Stylish Shoes - shoes'",
-      "url": "https://www.lehighoutfitters.com/on/demandware.static/-/Sites-Master-Product-catalog-en/default/dw91cb056d/images/76553BKBL_EXTRALARGE.jpg",
-      "quantity": 1,
-      "userId": "2013",
-      "productId": "07d4"
-    },
-    {
-      "id": "f53e",
-      "name": "i phone 12 pro",
-      "price": "120000",
-      "color": "gray",
-      "category": "cell phone",
-      "discription": "Apple iPhone 12 pro (128GB) - gray",
-      "url": "https://d28i4xct2kl5lp.cloudfront.net/product_images/1573710978.49.jpg",
-      "quantity": 1,
-      "userId": "2013",
-      "productId": "f036"
-    },
-    {
-      "id": "3953",
-      "name": "i phone 12 pro",
-      "price": "120000",
-      "color": "gray",
-      "category": "cell phone",
-      "discription": "Apple iPhone 12 pro (128GB) - gray",
-      "url": "https://d28i4xct2kl5lp.cloudfront.net/product_images/1573710978.49.jpg",
-      "quantity": 2,
-      "userId": "2013",
-      "productId": "f036"
-    },
-    {
-      "id": "b2ef",
-      "name": "samsung",
-      "price": "50000",
+      "id": "3bf1",
+      "name": "i phone",
+      "price": "40000",
       "color": "blue",
       "category": "cell phone",
-      "discription": "samsung mobile 8gb/128gb",
-      "url": "https://images.samsung.com/is/image/samsung/assets/fr/galaxy-a52/pcd/a-category/img_bnn_galaxy_device.png?$ORIGIN_PNG$",
-      "quantity": 2,
-      "userId": "2013",
-      "productId": "5e89"
+      "discription": "Apple iPhone (128GB) - Blue",
+      "url": "https://imobilecolombia.com/wp-content/uploads/2019/10/iphone-11-pro-max-gold-select-2019-1-768x909.png",
+      "quantity": 1,
+      "userId": "c3ae",
+      "productId": "4929"
+    },
+    {
+      "id": "ab39",
+      "name": "i phone",
+      "price": "40000",
+      "color": "blue",
+      "category": "cell phone",
+      "discription": "Apple iPhone (128GB) - Blue",
+      "url": "https://imobilecolombia.com/wp-content/uploads/2019/10/iphone-11-pro-max-gold-select-2019-1-768x909.png",
+      "quantity": 1,
+      "userId": "c3ae",
+      "productId": "4929"
+    },
+    {
+      "id": "d1d4",
+      "name": "i phone",
+      "price": "40000",
+      "color": "blue",
+      "category": "cell phone",
+      "discription": "Apple iPhone (128GB) - Blue",
+      "url": "https://imobilecolombia.com/wp-content/uploads/2019/10/iphone-11-pro-max-gold-select-2019-1-768x909.png",
+      "quantity": 1,
+      "userId": "c3ae",
+      "productId": "4929"
     }
-  ]
+  ],
+  "order": []
 }
