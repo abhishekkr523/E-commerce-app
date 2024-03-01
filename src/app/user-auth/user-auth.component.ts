@@ -11,7 +11,7 @@ export class UserAuthComponent {
   showLogin = false;
   authError: string = "";
 
-  constructor(private user: UserService, private product:ProductService) {
+  constructor(private user: UserService, private product: ProductService) {
   }
   dat: any
   ngOnInit(): void {
@@ -19,13 +19,13 @@ export class UserAuthComponent {
   }
   signUp(data: any): void {
     this.user.userSignUp(data)
-   
+
   }
   login(data: any) {
     this.authError = ""
     console.log("logindata", data);
     this.user.userLogin(data);
-    
+
 
     this.localCartToRemoteCart()
 
@@ -37,29 +37,36 @@ export class UserAuthComponent {
     this.showLogin = false
   }
 
-  localCartToRemoteCart(){
-    let data= localStorage.getItem('localCart');
-    if(data){
-      let cartDataList:any[]=JSON.parse(data);
-      let user=localStorage.getItem('user');
-      let userId=user && JSON.parse(user).id;
-      cartDataList.forEach((product:any,index)=>{
-        let cartData:any={
+  localCartToRemoteCart() {
+    let data = localStorage.getItem('localCart');
+    let user = localStorage.getItem('user');
+    let userId = user && JSON.parse(user).id;
+    if (data) {
+      let cartDataList: any[] = JSON.parse(data);
+
+      cartDataList.forEach((product: any, index) => {
+        let cartData: any = {
           ...product,
-          productId:product.id,userId,
+          productId: product.id, userId,
         };
         delete cartData.id;
         setTimeout(() => {
-          this.product.addToCart(cartData).subscribe((result)=>{
-            if(result){
-console.log("item store in db.")
+          this.product.addToCart(cartData).subscribe((result) => {
+            if (result) {
+              console.log("item store in db.")
             }
           })
         }, 500);
+        if (cartDataList.length === index + 1) {
+          localStorage.removeItem('localCart')
+        }
       })
     }
+    setTimeout(()=>{
+      this.product.getCartList(userId)
+    },2000);
     
   }
-  
+
 }
 

@@ -24,7 +24,7 @@
             <li routerLink="">{{userName | titlecase}}</li>
             <!-- <li routerLink="seller">Seller</li> -->
             <li> <a (click)="userLogout()" routerLink="/user-auth">Logout</a></li>
-            <li>Cart({{cartItem}})</li>
+            <li> <a routerLink="/cart-page">Cart({{cartItem}})</a></li>
         </ul>
         <ul class="seller" *ngSwitchCase="'seller'">
             <li routerLink="sellerAddProduct">Add product</li>
