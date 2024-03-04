@@ -18,7 +18,6 @@ export class SellersAuthComponent implements OnInit {
     this.seller.reloadSeller();
   }
   signUp(data: signUp): void {
-    console.log(data);
     this.seller.userSignUp(data)
     // .subscribe({
     //   next: (result: any) => {
@@ -35,8 +34,7 @@ export class SellersAuthComponent implements OnInit {
     // });
   }
   login(data: signUp) {
-    this.authError=""
-    console.log("logindata", data);
+    this.authError="";
     this.seller.userLogin(data);
     this.seller.isLoginError.subscribe((isError)=>{
       if(isError){

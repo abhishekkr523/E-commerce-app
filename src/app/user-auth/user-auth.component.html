@@ -1,4 +1,4 @@
-<div *ngIf="!showLogin" class="main">
+<div *ngIf="!showLogin" class="main" style="    height: 55vh;">
     <h2>User sign-up</h2>
     <form #data="ngForm" (ngSubmit)="signUp(data.value)" class="example-form">
         <div class="input-field">
@@ -16,7 +16,7 @@
 </div>
 
 
-<div *ngIf="showLogin" class="main" style="height: 38vh;">
+<div *ngIf="showLogin" class="main" style="height: 49vh;">
     <h2>User Login</h2>
     <p>{{authError}}</p>
     <form #sellerLogin="ngForm" (ngSubmit)="login(sellerLogin.value)" class="example-form">

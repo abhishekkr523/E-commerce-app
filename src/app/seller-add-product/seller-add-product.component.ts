@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { NgForm } from '@angular/forms';
 
@@ -7,12 +7,16 @@ import { NgForm } from '@angular/forms';
   templateUrl: './seller-add-product.component.html',
   styleUrl: './seller-add-product.component.scss'
 })
-export class SellerAddProductComponent {
+export class SellerAddProductComponent implements OnInit{
 addProductMessage:string|undefined;
+userName:string | undefined;
 @ViewChild('addProduct') addProductForm: NgForm | undefined; // ViewChild to get the form reference
 
 constructor(private product:ProductService){
 
+}
+ngOnInit(): void {
+  // this.userName=
 }
 
   submit(data: any){
@@ -28,7 +32,6 @@ constructor(private product:ProductService){
       }
       setTimeout(() => {
         this.addProductMessage = undefined;
-        console.log("hii")
       }, 3000)
     })
     

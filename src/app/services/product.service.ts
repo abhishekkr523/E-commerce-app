@@ -52,9 +52,7 @@ export class ProductService {
     let cartData = localStorage.getItem('localCart');
     if (cartData) {
       let items: any[] = JSON.parse(cartData);
-      console.log("item", items)
-      items = items.filter((item: any) => productId !== item.id)
-      console.log("items", items)
+      items = items.filter((item: any) => productId !== item.id);
       localStorage.setItem('localCart', JSON.stringify(items));
       this.cartData.emit(items);
     }
@@ -67,7 +65,6 @@ export class ProductService {
   getCartList(userId: number) {
     return this.http.get<any[]>('http://localhost:3000/cart?userId=' + userId,
       { observe: 'response' }).subscribe((result) => {
-        console.log("nnn", result)
         if (result && result.body) {
           this, this.cartData.emit(result.body)
         }

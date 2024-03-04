@@ -3,6 +3,9 @@
     <h2>Add New Product</h2>
     <h4 style="color: green;">{{addProductMessage}}</h4>
     <form #addProduct="ngForm" (ngSubmit)="submit(addProduct.value)" class="example-form">
+        <!-- <div class="input-field">
+            <input ngModel name="username" hidden value="{{userName}}">
+        </div> -->
         <div class="input-field">
             <input ngModel name="name" placeholder="Enter Product Name">
         </div>

@@ -6,12 +6,12 @@ import { Router } from '@angular/router';
   templateUrl: './checkout.component.html',
   styleUrl: './checkout.component.scss'
 })
-export class CheckoutComponent implements OnInit{
+export class CheckoutComponent implements OnInit {
   totalPrice: number | undefined;
   cartData: any | undefined
-  ordersms:string | undefined
+  ordersms: string | undefined
 
-  constructor(private product: ProductService, private route:Router) {
+  constructor(private product: ProductService, private route: Router) {
 
   }
 
@@ -19,36 +19,35 @@ export class CheckoutComponent implements OnInit{
     this.product.currentCard().subscribe((result) => {
 
       let price = 0;
-      this.cartData=result;
+      this.cartData = result;
       result.forEach((item) => { price += (+item.price * item.quantity); });
       this.totalPrice = price - price / 10 + price / 20 + price / 50;
-      console.log("lll",this.totalPrice)
     });
   }
-  orderNow(data:{email:string,address:string,contact:string}) {
+  orderNow(data: { email: string, address: string, contact: string }) {
     let user = localStorage.getItem('users');
     let userId = user && JSON.parse(user).id;
-    if(this.totalPrice){
-      let orderData:any={
+    if (this.totalPrice) {
+      let orderData: any = {
         ...data,
-        totalPrice:this.totalPrice,userId
+        totalPrice: this.totalPrice, userId
       }
-      this.cartData?.forEach((item:any)=>{
+      this.cartData?.forEach((item: any) => {
         setTimeout(() => {
           item.id && this.product.deleteCartItems(item.id)
         }, 700);
       })
-      this.product.order(orderData).subscribe((result)=>{
-        if(result){
-          this.ordersms="your order has been placed"
+      this.product.order(orderData).subscribe((result) => {
+        if (result) {
+          this.ordersms = "your order has been placed"
           // alert("Order placed");
           setTimeout(() => {
             this.route.navigate(['my-orders'])
-            this.ordersms=undefined
+            this.ordersms = undefined
           }, 4000);
         }
       })
     }
-    
+
   }
 }

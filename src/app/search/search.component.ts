@@ -15,10 +15,8 @@ export class SearchComponent implements OnInit{
 
   ngOnInit(): void {
     let Query=this.activatedRout.snapshot.paramMap.get('query');
-    console.log("jjj",Query)
     Query && this.product.searchProduct(Query).subscribe((result)=>{
       this.searchResult=result;
-      console.log("jjj",this.searchResult)
     })
   }
 

@@ -40,7 +40,7 @@ export class ProductDetailsComponent implements OnInit {
           // let item = result.filter((item: any) => productId?.toString() === item.producId.toString());
           let item = result.filter((item: any) => item && productId && item.id && item.producId && productId === item.id.toString() && item.producId.toString());
 
-          
+
           if (item.length) {
             this.cartData = item[0]
             this.removeCart = true;
@@ -86,14 +86,15 @@ export class ProductDetailsComponent implements OnInit {
   removeToCart(producId: any) {
     if (!localStorage.getItem('users')) {
       this.product.removeItemFromCart(producId);
-      
+      this.removeCart = false;
+
     } else {
-      this.cartData && this.product.removeToCart(this.cartData.id).subscribe((result)=>{
+      this.cartData && this.product.removeToCart(this.cartData.id).subscribe((result) => {
         let user = localStorage.getItem('users');
         let userId = user && JSON.parse(user).id;
         this.product.getCartList(userId);
       })
-      this.removeCart = false;
+      // this.removeCart = false;
     }
   }
 }

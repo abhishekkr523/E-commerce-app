@@ -21,7 +21,6 @@ export class HeaderComponent implements OnInit {
     this.route.events.subscribe((val: any) => {
       if (val.url) {
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
-          console.log("in seller area");
           let sellerStore = localStorage.getItem('seller');
           let sellerData = sellerStore && JSON.parse(sellerStore)[0];
           this.sellerName = sellerData.name;
@@ -29,7 +28,9 @@ export class HeaderComponent implements OnInit {
           this.menuType = "seller";
         } else if (localStorage.getItem('users')) {
           let userStore = localStorage.getItem('users');
-          let userData = userStore && JSON.parse(userStore);
+          // let userData = userStore && JSON.parse(userStore);
+          let userData = userStore ? JSON.parse(userStore) : null;
+
           console.log("userdata",userData)
           this.userName = userData.name;
           this.menuType = "user";
@@ -77,7 +78,6 @@ export class HeaderComponent implements OnInit {
 
 
   submitSearch(val: any) {
-    console.log("kk", val);
     this.route.navigate([`search/${val}`]); // Use backticks for string interpolation
   }
 

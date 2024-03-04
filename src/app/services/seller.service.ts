@@ -13,12 +13,10 @@ export class SellerService {
 
   constructor(private http: HttpClient,private router:Router) { }
   userSignUp(data: signUp) {
-    console.log("service call")
     this.http.post('http://localhost:3000/seller', data, { observe: 'response' }).subscribe((result) => {
       this.isSellerLoggedIn.next(true);
       localStorage.setItem('seller', JSON.stringify(result.body))
       this.router.navigate(['seller-home'],)
-      console.log("hello", result)
     });
 
   }
@@ -31,8 +29,6 @@ export class SellerService {
   }
 
   userLogin(data: login){
-    console.log(data);
-    console.log("service call");
     this.http.get(`http://localhost:3000/seller?email=${data.email}&password=${data.password}`, { observe: 'response' }).subscribe((result:any) => {
       console.log("result", result);
       if(result && result.body && result.body.length){

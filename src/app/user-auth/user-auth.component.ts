@@ -62,10 +62,10 @@ export class UserAuthComponent {
         }
       })
     }
-    setTimeout(()=>{
+    setTimeout(() => {
       this.product.getCartList(userId)
-    },2000);
-    
+    }, 2000);
+
   }
 
 }

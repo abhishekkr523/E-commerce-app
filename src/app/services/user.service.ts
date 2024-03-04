@@ -12,8 +12,7 @@ export class UserService {
     this.http.post('http://localhost:3000/users', user, { observe: 'response' }).subscribe((result) => {
       if(result){
       localStorage.setItem('users', JSON.stringify(result.body))
-      this.router.navigate(['/'],)
-      console.log("hello", result)
+      this.router.navigate(['/'],);
       }
     });
   }
@@ -25,7 +24,6 @@ export class UserService {
       if(result && result.body){
         localStorage.setItem('users', JSON.stringify(result.body[0]))
         this.router.navigate(['/'],)
-        console.log("hello", result)
         }
       
   })}

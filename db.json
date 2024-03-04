@@ -47,12 +47,24 @@
       "name": "abhi kr",
       "email": "abhi@gmail.com",
       "password": "123"
+    },
+    {
+      "id": "de74",
+      "name": "Abhishek",
+      "email": "abhishek@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "0890",
+      "name": "kumar",
+      "email": "abhi@gmail.com",
+      "password": "123"
     }
   ],
   "product": [
     {
       "id": "4929",
-      "name": "i phone",
+      "name": " phone",
       "price": "40000",
       "color": "blue",
       "category": "cell phone",
@@ -156,45 +168,134 @@
       "name": "abhi kr",
       "email": "7033abhishek@gmail.com",
       "password": "123"
+    },
+    {
+      "id": "33cb",
+      "name": "abhishek kumar",
+      "email": "abhi@123",
+      "password": "123"
+    },
+    {
+      "id": "e499",
+      "name": "kumar",
+      "email": "abhi@gmail.com",
+      "password": "123"
     }
   ],
   "cart": [
     {
-      "id": "3bf1",
-      "name": "i phone",
+      "id": "3943",
+      "name": " phone",
       "price": "40000",
       "color": "blue",
       "category": "cell phone",
       "discription": "Apple iPhone (128GB) - Blue",
       "url": "https://imobilecolombia.com/wp-content/uploads/2019/10/iphone-11-pro-max-gold-select-2019-1-768x909.png",
       "quantity": 1,
-      "userId": "c3ae",
+      "userId": "33cb",
       "productId": "4929"
     },
     {
-      "id": "ab39",
-      "name": "i phone",
+      "id": "7b02",
+      "name": " phone",
       "price": "40000",
       "color": "blue",
       "category": "cell phone",
       "discription": "Apple iPhone (128GB) - Blue",
       "url": "https://imobilecolombia.com/wp-content/uploads/2019/10/iphone-11-pro-max-gold-select-2019-1-768x909.png",
       "quantity": 1,
-      "userId": "c3ae",
-      "productId": "4929"
+      "productId": "4929",
+      "userId": null
     },
     {
-      "id": "d1d4",
-      "name": "i phone",
-      "price": "40000",
+      "id": "e94a",
+      "name": "puma shoes",
+      "price": "3000",
+      "color": "black",
+      "category": "shoes",
+      "discription": "running shoes for men",
+      "url": "https://cdna.lystit.com/photos/puma/1001e715/puma-Charcoal-Gray-Blazing-Yellow-Axelion-Mesh-Mens-Training-Shoes.jpeg",
+      "quantity": 1,
+      "productId": "81ca",
+      "userId": null
+    },
+    {
+      "id": "e4c5",
+      "name": "i phone 6",
+      "price": "80000",
+      "color": "yellow",
+      "category": "cell phone",
+      "discription": "Apple iPhone 6 (128GB) - yellow",
+      "url": "https://telecomtalk.info/wp-content/uploads/2022/09/how-you-can-buy-iphone-14-under-1024x683.jpg",
+      "quantity": 1,
+      "productId": "df14",
+      "userId": null
+    },
+    {
+      "id": "e3bf",
+      "name": "samsung",
+      "price": "50000",
       "color": "blue",
       "category": "cell phone",
-      "discription": "Apple iPhone (128GB) - Blue",
-      "url": "https://imobilecolombia.com/wp-content/uploads/2019/10/iphone-11-pro-max-gold-select-2019-1-768x909.png",
+      "discription": "samsung mobile 8gb/128gb",
+      "url": "https://images.samsung.com/is/image/samsung/assets/fr/galaxy-a52/pcd/a-category/img_bnn_galaxy_device.png?$ORIGIN_PNG$",
       "quantity": 1,
       "userId": "c3ae",
-      "productId": "4929"
+      "productId": "5e89"
+    },
+    {
+      "id": "cf1b",
+      "name": "i phone 6",
+      "price": "80000",
+      "color": "yellow",
+      "category": "cell phone",
+      "discription": "Apple iPhone 6 (128GB) - yellow",
+      "url": "https://telecomtalk.info/wp-content/uploads/2022/09/how-you-can-buy-iphone-14-under-1024x683.jpg",
+      "quantity": 1,
+      "userId": "c3ae",
+      "productId": "df14"
     }
   ],
-  "order": []
+  "order": [
+    {
+      "id": "3627",
+      "email": "",
+      "address": "",
+      "contact": "",
+      "totalPrice": 77600,
+      "userId": "33cb"
+    },
+    {
+      "id": "6a6d",
+      "email": "",
+      "address": "",
+      "contact": "",
+      "totalPrice": 41710,
+      "userId": "c3ae"
+    },
+    {
+      "id": "6146",
+      "email": "",
+      "address": "",
+      "contact": "",
+      "totalPrice": 41710,
+      "userId": "c3ae"
+    },
+    {
+      "id": "510c",
+      "email": "",
+      "address": "",
+      "contact": "",
+      "totalPrice": 146470,
+      "userId": "e499"
+    },
+    {
+      "id": "aa3d",
+      "email": "",
+      "address": "",
+      "contact": "",
+      "totalPrice": 146470,
+      "userId": "e499"
+    }
+  ]
 }
