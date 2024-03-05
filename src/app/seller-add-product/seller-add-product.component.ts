@@ -9,15 +9,24 @@ import { NgForm } from '@angular/forms';
 })
 export class SellerAddProductComponent implements OnInit{
 addProductMessage:string|undefined;
-userName:string | undefined;
+userName:any;
 @ViewChild('addProduct') addProductForm: NgForm | undefined; // ViewChild to get the form reference
 
 constructor(private product:ProductService){
 
 }
 ngOnInit(): void {
-  // this.userName=
+  const sellerDataString = localStorage.getItem('seller');
+  console.log("kk",sellerDataString)
+  if (sellerDataString) {
+    const sellerData = JSON.parse(sellerDataString);
+    this.userName = sellerData[0].name;
+    console.log("kkk",this.userName)
+
+  }
 }
+
+
 
   submit(data: any){
     console.log("product info",data);

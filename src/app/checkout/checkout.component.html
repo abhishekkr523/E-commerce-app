@@ -5,14 +5,48 @@
         <h2>Add shipping address</h2>
         <form #orderDetails="ngForm" (ngSubmit)="orderNow(orderDetails.value)" class="example-form">
             <div class="input-field">
-                <input ngModel type="email" name="email" placeholder="Enter user email">
+                <input type="email" placeholder="Enter Email" ngModel name="email" required email>
+                <div *ngIf="orderDetails.controls['email'].errors?.['required'] && (orderDetails.controls['email'].dirty || orderDetails.controls['email'].touched)"
+                    class="error-message">
+                    <span>Email is required.</span>
+                </div>
+                <div *ngIf="orderDetails.controls['email'].errors?.['email'] && (orderDetails.controls['email'].dirty || orderDetails.controls['email'].touched)"
+                    class="error-message">
+                    <span>Invalid email format.</span>
+                </div>
             </div>
             <div class="input-field">
-                <input type="text" placeholder="Enter user address" ngModel name="address">
+                <input type="text" placeholder="Enter user address" ngModel name="address" required minlength="5" maxlength="100">
+                <div *ngIf="orderDetails.controls['address'].errors?.['required'] && (orderDetails.controls['address'].dirty || orderDetails.controls['address'].touched)"
+                     class="error-message">
+                    <span>Address is required.</span>
+                </div>
+                <div *ngIf="orderDetails.controls['address'].errors?.['minlength'] && (orderDetails.controls['address'].dirty || orderDetails.controls['address'].touched)"
+                     class="error-message">
+                    <span>Address should be at least 5 characters.</span>
+                </div>
+                <div *ngIf="orderDetails.controls['address'].errors?.['maxlength'] && (orderDetails.controls['address'].dirty || orderDetails.controls['address'].touched)"
+                     class="error-message">
+                    <span>Address should be at most 100 characters.</span>
+                </div>
             </div>
+            
             <div class="input-field">
-                <input type="text" placeholder="Enter contact details" ngModel name="contact">
+                <input type="text" placeholder="Enter contact details" ngModel name="contact" required minlength="5" maxlength="20">
+                <div *ngIf="orderDetails.controls['contact'].errors?.['required'] && (orderDetails.controls['contact'].dirty || orderDetails.controls['contact'].touched)"
+                    class="error-message">
+                    <span>Contact details are required.</span>
+                </div>
+                <div *ngIf="orderDetails.controls['contact'].errors?.['minlength'] && (orderDetails.controls['contact'].dirty || orderDetails.controls['contact'].touched)"
+                    class="error-message">
+                    <span>Contact details should be at least 5 characters.</span>
+                </div>
+                <div *ngIf="orderDetails.controls['contact'].errors?.['maxlength'] && (orderDetails.controls['contact'].dirty || orderDetails.controls['contact'].touched)"
+                    class="error-message">
+                    <span>Contact details should be at most 20 characters.</span>
+                </div>
             </div>
+            
             <button type="submit">Order Now</button>
         </form>
 

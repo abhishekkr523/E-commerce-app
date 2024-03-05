@@ -11,8 +11,8 @@ export class ProductService {
   addProduct(data: any) {
     return this.http.post('http://localhost:3000/product', data);
   }
-  productList() {
-    return this.http.get<any>('http://localhost:3000/product');
+  productList(data:any) {
+    return this.http.get<any>(`http://localhost:3000/product?username=${data[0].name}`);
   }
 
   deleteProduct(id: number) {

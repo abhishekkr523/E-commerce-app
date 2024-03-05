@@ -42,7 +42,10 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0f5fe0;
 }
-
+button[type="submit"]:disabled {
+    background-color: #ccc; 
+    cursor: not-allowed; 
+}
 a {
     display: block;
     text-align: center;
@@ -51,3 +54,8 @@ a {
     margin-top: 10px;
     cursor: pointer;
 }
+span{
+    color: red;
+}
+ 
+

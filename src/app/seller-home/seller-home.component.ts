@@ -8,7 +8,7 @@ import { faTrash, faUserPen } from '@fortawesome/free-solid-svg-icons';
   styleUrl: './seller-home.component.scss'
 })
 export class SellerHomeComponent implements OnInit {
-  productList: undefined | any[]
+  productList: any[] | undefined
   productMessage: undefined | string;
   icon1 = faTrash;
   icon2 = faUserPen;
@@ -33,14 +33,18 @@ export class SellerHomeComponent implements OnInit {
   }
 
   list() {
-    this.product.productList().subscribe((result) => {
+    const data=localStorage.getItem('seller');
+    if(data){
+      const sellerData=JSON.parse(data);
+      this.productList=sellerData;
+    }
+    this.product.productList(this.productList)
+    .subscribe((result) => {
       if (result) {
         this.productList = result
+        
       }
     })
   }
 
-  editProduct(id: any) {
-
-  }
 }

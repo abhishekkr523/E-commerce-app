@@ -43,6 +43,9 @@
             color: #999;
           }
         }
+        span{
+            color: red;
+          }
       }
   
       button {
@@ -83,4 +86,10 @@
       }
     }
   }
+
+  
+  button[type="submit"]:disabled {
+    background-color: #ccc; 
+    cursor: not-allowed; 
+}
   

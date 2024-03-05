@@ -9,7 +9,7 @@ import { signUp } from '../data-type';
 })
 export class SellersAuthComponent implements OnInit {
   showLogin = false;
-  authError :string="";
+  authError: string = "";
 
   constructor(private seller: SellerService, private router: Router) {
   }
@@ -34,11 +34,11 @@ export class SellersAuthComponent implements OnInit {
     // });
   }
   login(data: signUp) {
-    this.authError="";
+    this.authError = "";
     this.seller.userLogin(data);
-    this.seller.isLoginError.subscribe((isError)=>{
-      if(isError){
-this.authError="Email and Password is not correct"
+    this.seller.isLoginError.subscribe((isError) => {
+      if (isError) {
+        this.authError = "Email and Password is Incorrect"
       }
     })
   }

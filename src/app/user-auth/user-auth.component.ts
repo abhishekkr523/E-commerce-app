@@ -25,7 +25,11 @@ export class UserAuthComponent {
     this.authError = ""
     console.log("logindata", data);
     this.user.userLogin(data);
-
+    this.user.isLoginError.subscribe((isError) => {
+      if (isError) {
+        this.authError = "Email and Password is Incorrect"
+      }
+    })
 
     this.localCartToRemoteCart()
 

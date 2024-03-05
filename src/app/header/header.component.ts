@@ -22,9 +22,9 @@ export class HeaderComponent implements OnInit {
       if (val.url) {
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
           let sellerStore = localStorage.getItem('seller');
-          let sellerData = sellerStore && JSON.parse(sellerStore)[0];
-          this.sellerName = sellerData.name;
-          console.log("sellerName", this.sellerName);
+          let sellerData = sellerStore ? JSON.parse(sellerStore):null;
+          this.sellerName = sellerData[0].name;
+          console.log("sellerNamee", this.sellerName);
           this.menuType = "seller";
         } else if (localStorage.getItem('users')) {
           let userStore = localStorage.getItem('users');

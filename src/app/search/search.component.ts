@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../services/product.service';
-import { query } from 'express';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
