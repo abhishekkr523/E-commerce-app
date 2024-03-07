@@ -34,8 +34,8 @@ export class UserService {
       console.log("result", result);
       if(result && result.body && result.body.length){
         console.log("user login success");
-        localStorage.setItem('seller', JSON.stringify(result.body))
-      this.router.navigate(['seller-home'],)
+        localStorage.setItem('users', JSON.stringify(result.body))
+      this.router.navigate(['/'],)
       }else{
         console.log("user login fail");
         this.isLoginError.emit(true)

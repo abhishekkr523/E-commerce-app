@@ -4,30 +4,32 @@
         <div class="input-field">
             <input ngModel name="name" placeholder="Enter Name" required minlength="3" maxlength="50"
                 pattern="[a-zA-Z ]*">
-            <div *ngIf="data.controls['name'].errors?.['required'] && (data.controls['name'].dirty || data.controls['name'].touched)"
+
+            <div *ngIf="data.controls['name'] && data.controls['name'].errors?.['required'] && (data.controls['name'].dirty || data.controls['name'].touched)"
                 class="error-message">
                 <span>Name is required.</span>
             </div>
-            <div *ngIf="data.controls['name'].errors?.['minlength'] && (data.controls['name'].dirty || data.controls['name'].touched)"
+
+            <div *ngIf="data.controls['name'] && data.controls['name'].errors?.['minlength'] && (data.controls['name'].dirty || data.controls['name'].touched)"
                 class="error-message">
                 <span>Name should be at least 3 characters.</span>
             </div>
-            <div *ngIf="data.controls['name'].errors?.['maxlength'] && (data.controls['name'].dirty || data.controls['name'].touched)"
+            <div *ngIf="data.controls['name'] && data.controls['name'].errors?.['maxlength'] && (data.controls['name'].dirty || data.controls['name'].touched)"
                 class="error-message">
                 <span>Name should be at most 50 characters.</span>
             </div>
-            <div *ngIf="data.controls['name'].errors?.['pattern'] && (data.controls['name'].dirty || data.controls['name'].touched)"
+            <div *ngIf="data.controls['name'] && data.controls['name'].errors?.['pattern'] && (data.controls['name'].dirty || data.controls['name'].touched)"
                 class="error-message">
                 <span>Invalid name format. Only letters and spaces are allowed.</span>
             </div>
         </div>
         <div class="input-field">
             <input type="email" placeholder="Enter Email" ngModel name="email" required email>
-            <div *ngIf="data.controls['email'].errors?.['required'] && (data.controls['email'].dirty || data.controls['email'].touched)"
+            <div *ngIf="data.controls['email'] && data.controls['email'].errors?.['required'] && (data.controls['email'].dirty || data.controls['email'].touched)"
                 class="error-message">
                 <span>Email is required.</span>
             </div>
-            <div *ngIf="data.controls['email'].errors?.['email'] && (data.controls['email'].dirty || data.controls['email'].touched)"
+            <div *ngIf="data.controls['email'] && data.controls['email'].errors?.['email'] && (data.controls['email'].dirty || data.controls['email'].touched)"
                 class="error-message">
                 <span>Invalid email format.</span>
             </div>
@@ -35,15 +37,15 @@
         <div class="input-field">
             <input type="password" placeholder="Enter Password" ngModel name="password" required minlength="8"
                 pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
-            <div *ngIf="data.controls['password'].errors?.['required'] && (data.controls['password'].dirty || data.controls['password'].touched)"
+            <div *ngIf="data.controls['password'] && data.controls['password'].errors?.['required'] && (data.controls['password'].dirty || data.controls['password'].touched)"
                 class="error-message">
                 <span>Password is required.</span>
             </div>
-            <div *ngIf="data.controls['password'].errors?.['minlength'] && (data.controls['password'].dirty || data.controls['password'].touched)"
+            <div *ngIf="data.controls['password'] && data.controls['password'].errors?.['minlength'] && (data.controls['password'].dirty || data.controls['password'].touched)"
                 class="error-message">
                 <span>Password should be at least 8 characters.</span>
             </div>
-            <div *ngIf="data.controls['password'].errors?.['pattern'] && (data.controls['password'].dirty || data.controls['password'].touched)"
+            <div *ngIf="data.controls['password'] && data.controls['password'].errors?.['pattern'] && (data.controls['password'].dirty || data.controls['password'].touched)"
                 class="error-message">
                 <span>Password must contain at least one uppercase letter, one lowercase letter, and one number.</span>
             </div>
@@ -60,11 +62,11 @@
     <form #sellerLogin="ngForm" (ngSubmit)="login(sellerLogin.value)" class="example-form">
         <div class="input-field">
             <input type="email" placeholder="Enter Email" ngModel name="email" required email>
-            <div *ngIf="sellerLogin.controls['email'].errors?.['required']&& (sellerLogin.controls['email'].dirty || sellerLogin.controls['email'].touched)"
+            <div *ngIf="sellerLogin.controls['email'] && sellerLogin.controls['email'].errors?.['required']&& (sellerLogin.controls['email'].dirty || sellerLogin.controls['email'].touched)"
                 class="error-message">
                 <span>Email is required.</span>
             </div>
-            <div *ngIf="sellerLogin.controls['email'].errors?.['email'] && (sellerLogin.controls['email'].dirty || sellerLogin.controls['email'].touched)"
+            <div *ngIf="sellerLogin.controls['email'] && sellerLogin.controls['email'].errors?.['email'] && (sellerLogin.controls['email'].dirty || sellerLogin.controls['email'].touched)"
                 class="error-message">
                 <span>Invalid email format.</span>
             </div>
@@ -72,15 +74,15 @@
         <div class="input-field">
             <input type="password" placeholder="Enter Password" ngModel name="password" required minlength="8"
                 pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
-            <div *ngIf="sellerLogin.controls['password'].errors?.['required'] && (sellerLogin.controls['password'].dirty || sellerLogin.controls['password'].touched)"
+            <div *ngIf="sellerLogin.controls['password'] && sellerLogin.controls['password'].errors?.['required'] && (sellerLogin.controls['password'].dirty || sellerLogin.controls['password'].touched)"
                 class="error-message">
                 <span>Password is required.</span>
             </div>
-            <div *ngIf="sellerLogin.controls['password'].errors?.['minlength'] && (sellerLogin.controls['password'].dirty || sellerLogin.controls['password'].touched)"
+            <div *ngIf="sellerLogin.controls['password'] && sellerLogin.controls['password'].errors?.['minlength'] && (sellerLogin.controls['password'].dirty || sellerLogin.controls['password'].touched)"
                 class="error-message">
                 <span>Password should be at least 8 characters.</span>
             </div>
-            <div *ngIf="sellerLogin.controls['password'].errors?.['pattern'] && (sellerLogin.controls['password'].dirty || sellerLogin.controls['password'].touched)"
+            <div *ngIf="sellerLogin.controls['password'] && sellerLogin.controls['password'].errors?.['pattern'] && (sellerLogin.controls['password'].dirty || sellerLogin.controls['password'].touched)"
                 class="error-message">
                 <span>Password must contain at least one uppercase letter, one lowercase letter, and one number.</span>
             </div>

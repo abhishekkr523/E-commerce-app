@@ -17,11 +17,9 @@ constructor(private product:ProductService){
 }
 ngOnInit(): void {
   const sellerDataString = localStorage.getItem('seller');
-  console.log("kk",sellerDataString)
   if (sellerDataString) {
     const sellerData = JSON.parse(sellerDataString);
-    this.userName = sellerData[0].name;
-    console.log("kkk",this.userName)
+    this.userName = sellerData.name;
 
   }
 }

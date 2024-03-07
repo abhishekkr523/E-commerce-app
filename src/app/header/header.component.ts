@@ -20,6 +20,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.route.events.subscribe((val: any) => {
       if (val.url) {
+        // console.log
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
           let sellerStore = localStorage.getItem('seller');
           let sellerData = sellerStore ? JSON.parse(sellerStore):null;
@@ -32,7 +33,7 @@ export class HeaderComponent implements OnInit {
           let userData = userStore ? JSON.parse(userStore) : null;
 
           console.log("userdata",userData)
-          this.userName = userData.name;
+          this.userName = userData[0].name;
           this.menuType = "user";
           this.product.getCartList(userData.id)
         } else {

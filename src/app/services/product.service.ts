@@ -12,6 +12,7 @@ export class ProductService {
     return this.http.post('http://localhost:3000/product', data);
   }
   productList(data:any) {
+    console.log("data",data)
     return this.http.get<any>(`http://localhost:3000/product?username=${data[0].name}`);
   }
 

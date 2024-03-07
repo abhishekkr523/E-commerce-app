@@ -1,112 +1,52 @@
 {
   "seller": [
     {
-      "id": "7954",
-      "name": "abhi",
-      "email": "7033abhishek@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "5cfb",
-      "name": "abhi kr",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "7c15",
-      "name": "abhi",
-      "email": "7033abhishek@gmail.com",
-      "password": "000"
-    },
-    {
-      "id": "b4d6",
-      "name": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "c8a8",
-      "name": "aa",
-      "email": "aa",
-      "password": "123"
-    },
-    {
-      "id": "2f6b",
-      "name": "abhi",
-      "email": "aa",
-      "password": "aa"
-    },
-    {
-      "id": "8d66",
-      "name": "kumar",
-      "email": "asd",
-      "password": "asd"
-    },
-    {
-      "id": "1d10",
-      "name": "abhi kr",
+      "id": "eb84",
+      "name": "Abhishek kumar",
       "email": "abhi@gmail.com",
-      "password": "123"
+      "password": "Abhi@123"
     },
     {
-      "id": "de74",
-      "name": "Abhishek",
-      "email": "abhishek@gmail.com",
-      "password": "123"
+      "id": "449d",
+      "name": "krishan",
+      "email": "krishna@gmail.com",
+      "password": "Abhi@123"
     },
     {
-      "id": "0890",
-      "name": "kumar",
-      "email": "abhi@gmail.com",
-      "password": "123"
+      "id": "f172",
+      "name": "rai",
+      "email": "rai@gmail.com",
+      "password": "Abhi@123"
     },
     {
-      "id": "5667",
+      "id": "59e8",
       "name": "kumar",
       "email": "kumar@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "6cff",
-      "name": "aa",
-      "email": "aa",
-      "password": "aa"
-    },
-    {
-      "id": "dd3d",
-      "name": "abhi",
-      "email": "lknlk@nnlk",
-      "password": "3637447484487478"
-    },
-    {
-      "id": "6c16",
-      "name": "abhishek",
-      "email": "abhi@gmail.com",
       "password": "Abhi@123"
     },
     {
-      "id": "a1b2",
-      "name": "kumar",
-      "email": "abc@gmail.com",
-      "password": "Abbhi@123"
-    },
-    {
-      "id": "03b3",
-      "name": "abc",
-      "email": "abcd@gmail.com",
+      "id": "1426",
+      "name": "ali",
+      "email": "ali@gmail.com",
       "password": "Abhi@123"
     },
     {
-      "id": "0e0f",
-      "name": "kbibh",
-      "email": "abcde@gmail.com",
+      "id": "a7e3",
+      "name": "akhil",
+      "email": "akhil@gmail.com",
       "password": "Abhi@123"
     },
     {
-      "id": "5df7",
-      "name": "xdbhrd",
-      "email": "xcbdxdfb@ser",
-      "password": "sfeA3xrgdg"
+      "id": "8cd3",
+      "name": "rohit",
+      "email": "rohit@gmail.com",
+      "password": "Abhi@123"
+    },
+    {
+      "id": "05cd",
+      "name": "pankaj",
+      "email": "pankaj@gmail.com",
+      "password": "Abhi@123"
     }
   ],
   "product": [
@@ -241,61 +181,77 @@
       "category": "shoes",
       "description": "nike shoes foe men",
       "url": "https://i5.walmartimages.com/asr/9cfbc395-e404-413d-8659-6206e104814a_1.0dbb748701cb04e562ca92f5dd045dc2.jpeg"
+    },
+    {
+      "id": "589b",
+      "username": "abhishek",
+      "name": "Nike",
+      "price": 1800,
+      "color": "brown",
+      "category": "shoes",
+      "description": "",
+      "url": "https://i5.walmartimages.com/asr/9cfbc395-e404-413d-8659-6206e104814a_1.0dbb748701cb04e562ca92f5dd045dc2.jpeg"
+    },
+    {
+      "id": "e65a",
+      "name": "Nike",
+      "price": 300,
+      "color": "brown",
+      "category": "shoes",
+      "description": "",
+      "url": "https://i5.walmartimages.com/asr/9cfbc395-e404-413d-8659-6206e104814a_1.0dbb748701cb04e562ca92f5dd045dc2.jpeg"
+    },
+    {
+      "id": "b74d",
+      "username": "krishan",
+      "name": "Nike",
+      "price": 400,
+      "color": "brown",
+      "category": "shoes",
+      "description": "",
+      "url": "https://i5.walmartimages.com/asr/9cfbc395-e404-413d-8659-6206e104814a_1.0dbb748701cb04e562ca92f5dd045dc2.jpeg"
+    },
+    {
+      "id": "8bcd",
+      "username": "rai",
+      "name": "Nike",
+      "price": 700,
+      "color": "brown",
+      "category": "shoes",
+      "description": "",
+      "url": "https://i5.walmartimages.com/asr/9cfbc395-e404-413d-8659-6206e104814a_1.0dbb748701cb04e562ca92f5dd045dc2.jpeg"
+    },
+    {
+      "id": "089f",
+      "username": "kumar",
+      "name": "Nike",
+      "price": 1200,
+      "color": "brown",
+      "category": "shoes",
+      "description": "",
+      "url": "https://i5.walmartimages.com/asr/9cfbc395-e404-413d-8659-6206e104814a_1.0dbb748701cb04e562ca92f5dd045dc2.jpeg"
+    },
+    {
+      "id": "e684",
+      "name": "Nike",
+      "price": 1500,
+      "color": "brown",
+      "category": "shoes",
+      "description": "",
+      "url": "https://i5.walmartimages.com/asr/9cfbc395-e404-413d-8659-6206e104814a_1.0dbb748701cb04e562ca92f5dd045dc2.jpeg"
     }
   ],
   "users": [
     {
-      "id": "2013",
-      "name": "abhishek",
-      "email": "abc",
-      "password": "123"
-    },
-    {
-      "id": "06dc",
-      "name": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "9049",
-      "name": "h",
-      "email": "h",
-      "password": ""
-    },
-    {
-      "id": "c3ae",
-      "name": "abhi kr",
-      "email": "7033abhishek@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "33cb",
-      "name": "abhishek kumar",
-      "email": "abhi@123",
-      "password": "123"
-    },
-    {
-      "id": "e499",
-      "name": "kumar",
-      "email": "abhi@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "ddd7",
-      "name": "Abhishek",
-      "email": "abhi@gmail.com",
+      "id": "dda5",
+      "name": "rohit",
+      "email": "rohit@gmail.com",
       "password": "Abhi@123"
     },
     {
-      "id": "df8c",
-      "name": "jhgj",
-      "email": "fgtyv@gma",
-      "password": "Abhi@123"
-    },
-    {
-      "id": "bbd1",
-      "name": "jhh",
-      "email": "abcde@gmail.com",
+      "id": "d354",
+      "name": "kum",
+      "email": "kum@gmail.com",
       "password": "Abhi@123"
     }
   ],
@@ -395,6 +351,164 @@
       "quantity": 1,
       "userId": "ddd7",
       "productId": "f036"
+    },
+    {
+      "id": "a40f",
+      "name": "iphone 13",
+      "price": "120000",
+      "color": "white",
+      "category": "cell phone",
+      "discription": "Apple iPhone 13 (128GB) - white",
+      "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg",
+      "quantity": 1,
+      "userId": "dda5",
+      "productId": "734e"
+    },
+    {
+      "id": "3f5e",
+      "name": "i phone",
+      "price": "60000",
+      "color": "yellow",
+      "category": "cell phone",
+      "discription": "Apple iPhone 6 (128GB) - yellow",
+      "url": "https://telecomtalk.info/wp-content/uploads/2022/09/how-you-can-buy-iphone-14-under-1024x683.jpg",
+      "quantity": 1,
+      "productId": "df14"
+    },
+    {
+      "id": "9ed7",
+      "name": "iphone 13",
+      "price": "120000",
+      "color": "white",
+      "category": "cell phone",
+      "discription": "Apple iPhone 13 (128GB) - white",
+      "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg",
+      "quantity": 1,
+      "productId": "734e"
+    },
+    {
+      "id": "28f6",
+      "name": "iphone 13",
+      "price": "120000",
+      "color": "white",
+      "category": "cell phone",
+      "discription": "Apple iPhone 13 (128GB) - white",
+      "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg",
+      "quantity": 1,
+      "productId": "734e"
+    },
+    {
+      "id": "dea1",
+      "name": "iphone 13",
+      "price": "120000",
+      "color": "white",
+      "category": "cell phone",
+      "discription": "Apple iPhone 13 (128GB) - white",
+      "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg",
+      "quantity": 1,
+      "productId": "734e"
+    },
+    {
+      "id": "8069",
+      "name": "i phone",
+      "price": "60000",
+      "color": "yellow",
+      "category": "cell phone",
+      "discription": "Apple iPhone 6 (128GB) - yellow",
+      "url": "https://telecomtalk.info/wp-content/uploads/2022/09/how-you-can-buy-iphone-14-under-1024x683.jpg",
+      "quantity": 1,
+      "productId": "df14"
+    },
+    {
+      "id": "65d5",
+      "name": "iphone 13",
+      "price": "120000",
+      "color": "white",
+      "category": "cell phone",
+      "discription": "Apple iPhone 13 (128GB) - white",
+      "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg",
+      "quantity": 1,
+      "productId": "734e"
+    },
+    {
+      "id": "e330",
+      "name": "iphone 13",
+      "price": "120000",
+      "color": "white",
+      "category": "cell phone",
+      "discription": "Apple iPhone 13 (128GB) - white",
+      "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg",
+      "quantity": 1,
+      "productId": "734e"
+    },
+    {
+      "id": "89fc",
+      "name": "sports shoes",
+      "price": "1000",
+      "color": "black",
+      "category": "shoes",
+      "discription": "Comfortable & Stylish Shoes - shoes'",
+      "url": "https://www.lehighoutfitters.com/on/demandware.static/-/Sites-Master-Product-catalog-en/default/dw91cb056d/images/76553BKBL_EXTRALARGE.jpg",
+      "quantity": 1,
+      "productId": "07d4"
+    },
+    {
+      "id": "51ab",
+      "name": "i phone",
+      "price": "60000",
+      "color": "yellow",
+      "category": "cell phone",
+      "discription": "Apple iPhone 6 (128GB) - yellow",
+      "url": "https://telecomtalk.info/wp-content/uploads/2022/09/how-you-can-buy-iphone-14-under-1024x683.jpg",
+      "quantity": 1,
+      "productId": "df14",
+      "userId": null
+    },
+    {
+      "id": "db68",
+      "name": "iphone 13",
+      "price": "120000",
+      "color": "white",
+      "category": "cell phone",
+      "discription": "Apple iPhone 13 (128GB) - white",
+      "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg",
+      "quantity": 1,
+      "productId": "734e",
+      "userId": null
+    },
+    {
+      "id": "9b19",
+      "name": "i phone 12 pro",
+      "price": "120000",
+      "color": "gray",
+      "category": "cell phone",
+      "discription": "Apple iPhone 12 pro (128GB) - gray",
+      "url": "https://d28i4xct2kl5lp.cloudfront.net/product_images/1573710978.49.jpg",
+      "quantity": 1,
+      "productId": "f036",
+      "userId": null
+    },
+    {
+      "id": "3fea",
+      "name": "iphone 13",
+      "price": "120000",
+      "color": "white",
+      "category": "cell phone",
+      "discription": "Apple iPhone 13 (128GB) - white",
+      "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg",
+      "quantity": 1,
+      "productId": "734e"
+    },
+    {
+      "id": "23da",
+      "name": "iphone 13 pro",
+      "price": "150000",
+      "color": "brown",
+      "category": "cell phone",
+      "discription": "Apple iPhone 13  pro (128GB) - black",
+      "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg",
+      "quantity": 1,
+      "productId": "7d39"
     }
   ],
   "order": [
@@ -445,6 +559,14 @@
       "contact": "",
       "totalPrice": 58200,
       "userId": "ddd7"
+    },
+    {
+      "id": "445f",
+      "email": "",
+      "address": "",
+      "contact": "",
+      "totalPrice": 174600,
+      "userId": "d354"
     }
   ]
 }
