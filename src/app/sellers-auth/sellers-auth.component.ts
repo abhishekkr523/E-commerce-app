@@ -16,22 +16,14 @@ export class SellersAuthComponent implements OnInit {
   dat: any
   ngOnInit(): void {
     this.seller.reloadSeller();
+     // Subscribe to the sign-up success event
+     this.seller.signUpSuccess.subscribe(() => {
+      // Update the menu type after successful sign-up
+      this.router.navigate(['seller-home']);
+    });
   }
   signUp(data: signUp): void {
     this.seller.userSignUp(data)
-    // .subscribe({
-    //   next: (result: any) => {
-    //     // console.log('Response:', result);
-    //     if (result) {
-    //       this.router.navigate(['seller-home'])
-    //     }
-
-    //   },
-    //   error: (error: any) => {
-    //     console.error('Error:', error);
-    //     // Handle the error appropriately
-    //   }
-    // });
   }
   login(data: signUp) {
     this.authError = "";

@@ -19,7 +19,8 @@ ngOnInit(): void {
   const sellerDataString = localStorage.getItem('seller');
   if (sellerDataString) {
     const sellerData = JSON.parse(sellerDataString);
-    this.userName = sellerData.name;
+    this.userName = sellerData[0].name;
+    console.log("pp",this.userName)
 
   }
 }

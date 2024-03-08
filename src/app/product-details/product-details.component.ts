@@ -67,12 +67,13 @@ export class ProductDetailsComponent implements OnInit {
       } else {
         console.log("user is log in");
         let user = localStorage.getItem('users');
-        let userId = user && JSON.parse(user).id;
+        let userId = user && JSON.parse(user)[0].id;
+        console.log("usereIdd",userId)
         let cartData: any = { ...this.productData, userId, productId: this.productData.id, }
-        console.log("jjj", cartData);
         delete cartData.id;
         this.product.addToCart(cartData).subscribe((result) => {
           if (result) {
+            console.log("oo",result)
             this.product.getCartList(userId);
             this.removeCart = true
             alert("Product is added to cart");
@@ -94,7 +95,7 @@ export class ProductDetailsComponent implements OnInit {
         let userId = user && JSON.parse(user).id;
         this.product.getCartList(userId);
       })
-      // this.removeCart = false;
+      this.removeCart = false;
     }
   }
 }

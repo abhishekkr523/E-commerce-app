@@ -10,15 +10,19 @@ import { Router } from '@angular/router';
 export class SellerService {
   isSellerLoggedIn = new BehaviorSubject<boolean>(false)
   isLoginError=new EventEmitter<boolean>(false)
+  // Add an event emitter to notify sign-up success
+  signUpSuccess = new EventEmitter<void>();
+  
 
   constructor(private http: HttpClient,private router:Router) { }
+
   userSignUp(data: signUp) {
     this.http.post('http://localhost:3000/seller', data, { observe: 'response' }).subscribe((result) => {
       this.isSellerLoggedIn.next(true);
-      localStorage.setItem('seller', JSON.stringify(result.body))
-      this.router.navigate(['seller-home'],)
+      localStorage.setItem('seller', JSON.stringify(result.body));
+      this.signUpSuccess.emit(); // Emit the sign-up success event
+      this.router.navigate(['seller-home']);
     });
-
   }
 
   reloadSeller(){

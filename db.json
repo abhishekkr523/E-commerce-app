@@ -47,6 +47,54 @@
       "name": "pankaj",
       "email": "pankaj@gmail.com",
       "password": "Abhi@123"
+    },
+    {
+      "id": "8f72",
+      "name": "ali",
+      "email": "amanali@gmail.com",
+      "password": "Abhi@123"
+    },
+    {
+      "id": "a1f8",
+      "name": "awanish",
+      "email": "awanish@gmail.com",
+      "password": "Abhi@123"
+    },
+    {
+      "id": "1c97",
+      "name": "pankaj",
+      "email": "pankajverma@gmail.com",
+      "password": "Abhi@123"
+    },
+    {
+      "id": "d3c7",
+      "name": "utkarsh",
+      "email": "utkarsh@gmail.com",
+      "password": "Abhi@123"
+    },
+    {
+      "id": "e82c",
+      "name": "rahul",
+      "email": "rahul@gmail.com",
+      "password": "Abhi@1232"
+    },
+    {
+      "id": "ce01",
+      "name": "deepak",
+      "email": "deepak@gmail.com",
+      "password": "Abhi@123"
+    },
+    {
+      "id": "b397",
+      "name": "muskan",
+      "email": "muskan@gmail.com",
+      "password": "Abhi@123"
+    },
+    {
+      "id": "5347",
+      "name": "arun",
+      "email": "arun@gmail.com",
+      "password": "Abhi@123"
     }
   ],
   "product": [
@@ -239,6 +287,83 @@
       "category": "shoes",
       "description": "",
       "url": "https://i5.walmartimages.com/asr/9cfbc395-e404-413d-8659-6206e104814a_1.0dbb748701cb04e562ca92f5dd045dc2.jpeg"
+    },
+    {
+      "id": "1dfa",
+      "name": "puma shoe",
+      "price": "",
+      "color": "black",
+      "category": "shoes",
+      "description": "",
+      "url": "https://i5.walmartimages.com/asr/9cfbc395-e404-413d-8659-6206e104814a_1.0dbb748701cb04e562ca92f5dd045dc2.jpeg"
+    },
+    {
+      "id": "6903",
+      "name": "xyx",
+      "price": 900,
+      "color": "black",
+      "category": "shoes",
+      "description": "",
+      "url": "https://i5.walmartimages.com/asr/9cfbc395-e404-413d-8659-6206e104814a_1.0dbb748701cb04e562ca92f5dd045dc2.jpeg"
+    },
+    {
+      "id": "9356",
+      "username": "ali",
+      "name": "xyx",
+      "price": 600,
+      "color": "black",
+      "category": "shoes",
+      "description": "",
+      "url": "https://i5.walmartimages.com/asr/9cfbc395-e404-413d-8659-6206e104814a_1.0dbb748701cb04e562ca92f5dd045dc2.jpeg"
+    },
+    {
+      "id": "2a97",
+      "username": "ali",
+      "name": "Nike shoes",
+      "price": 4000,
+      "color": "black",
+      "category": "shoes",
+      "description": "",
+      "url": "https://i5.walmartimages.com/asr/9cfbc395-e404-413d-8659-6206e104814a_1.0dbb748701cb04e562ca92f5dd045dc2.jpeg"
+    },
+    {
+      "id": "37ff",
+      "username": "krishan",
+      "name": "xyx",
+      "price": 2000,
+      "color": "black",
+      "category": "shoes",
+      "description": "",
+      "url": "https://i5.walmartimages.com/asr/9cfbc395-e404-413d-8659-6206e104814a_1.0dbb748701cb04e562ca92f5dd045dc2.jpeg"
+    },
+    {
+      "id": "26fb",
+      "username": "rohit",
+      "name": "xyx",
+      "price": 700,
+      "color": "black",
+      "category": "shoes",
+      "description": "",
+      "url": "https://i5.walmartimages.com/asr/9cfbc395-e404-413d-8659-6206e104814a_1.0dbb748701cb04e562ca92f5dd045dc2.jpeg"
+    },
+    {
+      "id": "7f17",
+      "name": "abc",
+      "price": "",
+      "color": "black",
+      "category": "shoes",
+      "description": "",
+      "url": "https://i5.walmartimages.com/asr/9cfbc395-e404-413d-8659-6206e104814a_1.0dbb748701cb04e562ca92f5dd045dc2.jpeg"
+    },
+    {
+      "id": "0d6c",
+      "username": "arun",
+      "name": "abcd",
+      "price": "",
+      "color": "black",
+      "category": "shoes",
+      "description": "",
+      "url": "https://i5.walmartimages.com/asr/9cfbc395-e404-413d-8659-6206e104814a_1.0dbb748701cb04e562ca92f5dd045dc2.jpeg"
     }
   ],
   "users": [
@@ -252,6 +377,42 @@
       "id": "d354",
       "name": "kum",
       "email": "kum@gmail.com",
+      "password": "Abhi@123"
+    },
+    {
+      "id": "a858",
+      "name": "ali",
+      "email": "ali@gmail.com",
+      "password": "Abhi@123"
+    },
+    {
+      "id": "7b14",
+      "name": "uuu",
+      "email": "utkarsh@gmail.com",
+      "password": "Abhi@123"
+    },
+    {
+      "id": "8abc",
+      "name": "ojesh",
+      "email": "ojesh@gmail.com",
+      "password": "Abhi@123"
+    },
+    {
+      "id": "a110",
+      "name": "vaishali",
+      "email": "vaishali@gmail.com",
+      "password": "Abhi@123"
+    },
+    {
+      "id": "6783",
+      "name": "akshat",
+      "email": "akshat@gmail.com",
+      "password": "Abhishek@123"
+    },
+    {
+      "id": "7255",
+      "name": "ravi",
+      "email": "ravi@gmail.com",
       "password": "Abhi@123"
     }
   ],
@@ -509,6 +670,471 @@
       "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg",
       "quantity": 1,
       "productId": "7d39"
+    },
+    {
+      "id": "6c49",
+      "name": "i phone",
+      "price": "60000",
+      "color": "yellow",
+      "category": "cell phone",
+      "discription": "Apple iPhone 6 (128GB) - yellow",
+      "url": "https://telecomtalk.info/wp-content/uploads/2022/09/how-you-can-buy-iphone-14-under-1024x683.jpg",
+      "quantity": 1,
+      "productId": "df14"
+    },
+    {
+      "id": "7993",
+      "name": "i phone",
+      "price": "60000",
+      "color": "yellow",
+      "category": "cell phone",
+      "discription": "Apple iPhone 6 (128GB) - yellow",
+      "url": "https://telecomtalk.info/wp-content/uploads/2022/09/how-you-can-buy-iphone-14-under-1024x683.jpg",
+      "quantity": 1,
+      "productId": "df14"
+    },
+    {
+      "id": "589e",
+      "name": "i phone",
+      "price": "60000",
+      "color": "yellow",
+      "category": "cell phone",
+      "discription": "Apple iPhone 6 (128GB) - yellow",
+      "url": "https://telecomtalk.info/wp-content/uploads/2022/09/how-you-can-buy-iphone-14-under-1024x683.jpg",
+      "quantity": 1,
+      "productId": "df14",
+      "userId": null
+    },
+    {
+      "id": "b078",
+      "name": "iphone 13",
+      "price": "120000",
+      "color": "white",
+      "category": "cell phone",
+      "discription": "Apple iPhone 13 (128GB) - white",
+      "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg",
+      "quantity": 1,
+      "productId": "734e"
+    },
+    {
+      "id": "bec7",
+      "name": "iphone 13",
+      "price": "120000",
+      "color": "white",
+      "category": "cell phone",
+      "discription": "Apple iPhone 13 (128GB) - white",
+      "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg",
+      "quantity": 1,
+      "productId": "734e"
+    },
+    {
+      "id": "2f7e",
+      "name": "iphone 13",
+      "price": "120000",
+      "color": "white",
+      "category": "cell phone",
+      "discription": "Apple iPhone 13 (128GB) - white",
+      "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg",
+      "quantity": 1,
+      "productId": "734e"
+    },
+    {
+      "id": "0dbf",
+      "name": "iphone 13",
+      "price": "120000",
+      "color": "white",
+      "category": "cell phone",
+      "discription": "Apple iPhone 13 (128GB) - white",
+      "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg",
+      "quantity": 1,
+      "productId": "734e"
+    },
+    {
+      "id": "4bfa",
+      "name": "i phone",
+      "price": "60000",
+      "color": "yellow",
+      "category": "cell phone",
+      "discription": "Apple iPhone 6 (128GB) - yellow",
+      "url": "https://telecomtalk.info/wp-content/uploads/2022/09/how-you-can-buy-iphone-14-under-1024x683.jpg",
+      "quantity": 1,
+      "productId": "df14",
+      "userId": null
+    },
+    {
+      "id": "6db5",
+      "name": "samsung",
+      "price": "50000",
+      "color": "blue",
+      "category": "cell phone",
+      "discription": "samsung mobile 8gb/128gb",
+      "url": "https://images.samsung.com/is/image/samsung/assets/fr/galaxy-a52/pcd/a-category/img_bnn_galaxy_device.png?$ORIGIN_PNG$",
+      "quantity": 1,
+      "productId": "5e89",
+      "userId": null
+    },
+    {
+      "id": "7256",
+      "name": "sports shoes",
+      "price": "1000",
+      "color": "black",
+      "category": "shoes",
+      "discription": "Comfortable & Stylish Shoes - shoes'",
+      "url": "https://www.lehighoutfitters.com/on/demandware.static/-/Sites-Master-Product-catalog-en/default/dw91cb056d/images/76553BKBL_EXTRALARGE.jpg",
+      "quantity": 1,
+      "productId": "07d4",
+      "userId": null
+    },
+    {
+      "id": "8cce",
+      "name": "puma shoes",
+      "price": "3000",
+      "color": "black",
+      "category": "shoes",
+      "discription": "running shoes for men",
+      "url": "https://cdna.lystit.com/photos/puma/1001e715/puma-Charcoal-Gray-Blazing-Yellow-Axelion-Mesh-Mens-Training-Shoes.jpeg",
+      "quantity": 1,
+      "productId": "81ca",
+      "userId": null
+    },
+    {
+      "id": "7b04",
+      "name": "Running shoes",
+      "price": "1700",
+      "color": "red",
+      "category": "shoes",
+      "discription": "jordon running shoes.",
+      "url": "https://i5.walmartimages.com/asr/cf737e2d-8bc0-4d42-b48e-1ea8b31d191c_1.b74d13d4ea30a71a8d820ad91619a2b4.jpeg",
+      "quantity": 1,
+      "productId": "5487",
+      "userId": null
+    },
+    {
+      "id": "5b0a",
+      "name": "i phone 12 pro",
+      "price": "120000",
+      "color": "gray",
+      "category": "cell phone",
+      "discription": "Apple iPhone 12 pro (128GB) - gray",
+      "url": "https://d28i4xct2kl5lp.cloudfront.net/product_images/1573710978.49.jpg",
+      "quantity": 1,
+      "productId": "f036",
+      "userId": null
+    },
+    {
+      "id": "24b2",
+      "name": "i phone",
+      "price": "60000",
+      "color": "yellow",
+      "category": "cell phone",
+      "discription": "Apple iPhone 6 (128GB) - yellow",
+      "url": "https://telecomtalk.info/wp-content/uploads/2022/09/how-you-can-buy-iphone-14-under-1024x683.jpg",
+      "quantity": 1,
+      "productId": "df14",
+      "userId": null
+    },
+    {
+      "id": "c948",
+      "name": "i phone",
+      "price": "60000",
+      "color": "yellow",
+      "category": "cell phone",
+      "discription": "Apple iPhone 6 (128GB) - yellow",
+      "url": "https://telecomtalk.info/wp-content/uploads/2022/09/how-you-can-buy-iphone-14-under-1024x683.jpg",
+      "quantity": 1,
+      "productId": "df14",
+      "userId": null
+    },
+    {
+      "id": "ee21",
+      "name": "i phone 12 pro",
+      "price": "120000",
+      "color": "gray",
+      "category": "cell phone",
+      "discription": "Apple iPhone 12 pro (128GB) - gray",
+      "url": "https://d28i4xct2kl5lp.cloudfront.net/product_images/1573710978.49.jpg",
+      "quantity": 1,
+      "productId": "f036",
+      "userId": null
+    },
+    {
+      "id": "ebb8",
+      "name": "iphone 13",
+      "price": "120000",
+      "color": "white",
+      "category": "cell phone",
+      "discription": "Apple iPhone 13 (128GB) - white",
+      "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg",
+      "quantity": 1,
+      "productId": "734e",
+      "userId": null
+    },
+    {
+      "id": "a88b",
+      "name": "Running shoes",
+      "price": "1700",
+      "color": "red",
+      "category": "shoes",
+      "discription": "jordon running shoes.",
+      "url": "https://i5.walmartimages.com/asr/cf737e2d-8bc0-4d42-b48e-1ea8b31d191c_1.b74d13d4ea30a71a8d820ad91619a2b4.jpeg",
+      "quantity": 1,
+      "productId": "5487",
+      "userId": null
+    },
+    {
+      "id": "da9a",
+      "name": "i phone",
+      "price": "60000",
+      "color": "yellow",
+      "category": "cell phone",
+      "discription": "Apple iPhone 6 (128GB) - yellow",
+      "url": "https://telecomtalk.info/wp-content/uploads/2022/09/how-you-can-buy-iphone-14-under-1024x683.jpg",
+      "quantity": 1,
+      "productId": "df14",
+      "userId": null
+    },
+    {
+      "id": "2fb5",
+      "name": "iphone 13",
+      "price": "120000",
+      "color": "white",
+      "category": "cell phone",
+      "discription": "Apple iPhone 13 (128GB) - white",
+      "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg",
+      "quantity": 1,
+      "productId": "734e",
+      "userId": null
+    },
+    {
+      "id": "b33e",
+      "name": "i phone",
+      "price": "60000",
+      "color": "yellow",
+      "category": "cell phone",
+      "discription": "Apple iPhone 6 (128GB) - yellow",
+      "url": "https://telecomtalk.info/wp-content/uploads/2022/09/how-you-can-buy-iphone-14-under-1024x683.jpg",
+      "quantity": 1,
+      "productId": "df14",
+      "userId": null
+    },
+    {
+      "id": "2bdc",
+      "name": "iphone 13",
+      "price": "120000",
+      "color": "white",
+      "category": "cell phone",
+      "discription": "Apple iPhone 13 (128GB) - white",
+      "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg",
+      "quantity": 1,
+      "productId": "734e",
+      "userId": null
+    },
+    {
+      "id": "9121",
+      "name": "i phone",
+      "price": "60000",
+      "color": "yellow",
+      "category": "cell phone",
+      "discription": "Apple iPhone 6 (128GB) - yellow",
+      "url": "https://telecomtalk.info/wp-content/uploads/2022/09/how-you-can-buy-iphone-14-under-1024x683.jpg",
+      "quantity": 1,
+      "productId": "df14",
+      "userId": null
+    },
+    {
+      "id": "d105",
+      "name": "i phone 12 pro",
+      "price": "120000",
+      "color": "gray",
+      "category": "cell phone",
+      "discription": "Apple iPhone 12 pro (128GB) - gray",
+      "url": "https://d28i4xct2kl5lp.cloudfront.net/product_images/1573710978.49.jpg",
+      "quantity": 1,
+      "productId": "f036",
+      "userId": null
+    },
+    {
+      "id": "69ad",
+      "name": "i phone 12 pro",
+      "price": "120000",
+      "color": "gray",
+      "category": "cell phone",
+      "discription": "Apple iPhone 12 pro (128GB) - gray",
+      "url": "https://d28i4xct2kl5lp.cloudfront.net/product_images/1573710978.49.jpg",
+      "quantity": 1,
+      "productId": "f036"
+    },
+    {
+      "id": "b3c2",
+      "name": "i phone",
+      "price": "60000",
+      "color": "yellow",
+      "category": "cell phone",
+      "discription": "Apple iPhone 6 (128GB) - yellow",
+      "url": "https://telecomtalk.info/wp-content/uploads/2022/09/how-you-can-buy-iphone-14-under-1024x683.jpg",
+      "quantity": 1,
+      "userId": [
+        {
+          "id": "dda5",
+          "name": "rohit",
+          "email": "rohit@gmail.com",
+          "password": "Abhi@123"
+        }
+      ],
+      "productId": "df14"
+    },
+    {
+      "id": "f2b2",
+      "name": "i phone",
+      "price": "60000",
+      "color": "yellow",
+      "category": "cell phone",
+      "discription": "Apple iPhone 6 (128GB) - yellow",
+      "url": "https://telecomtalk.info/wp-content/uploads/2022/09/how-you-can-buy-iphone-14-under-1024x683.jpg",
+      "quantity": 1,
+      "userId": [
+        {
+          "id": "dda5",
+          "name": "rohit",
+          "email": "rohit@gmail.com",
+          "password": "Abhi@123"
+        }
+      ],
+      "productId": "df14"
+    },
+    {
+      "id": "f13f",
+      "name": "iphone 13",
+      "price": "120000",
+      "color": "white",
+      "category": "cell phone",
+      "discription": "Apple iPhone 13 (128GB) - white",
+      "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg",
+      "quantity": 1,
+      "userId": [
+        {
+          "id": "dda5",
+          "name": "rohit",
+          "email": "rohit@gmail.com",
+          "password": "Abhi@123"
+        }
+      ],
+      "productId": "734e"
+    },
+    {
+      "id": "7bbc",
+      "name": "iphone 13",
+      "price": "120000",
+      "color": "white",
+      "category": "cell phone",
+      "discription": "Apple iPhone 13 (128GB) - white",
+      "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg",
+      "quantity": 1,
+      "userId": [
+        {
+          "id": "dda5",
+          "name": "rohit",
+          "email": "rohit@gmail.com",
+          "password": "Abhi@123"
+        }
+      ],
+      "productId": "734e"
+    },
+    {
+      "id": "34cd",
+      "name": "i phone 12 pro",
+      "price": "120000",
+      "color": "gray",
+      "category": "cell phone",
+      "discription": "Apple iPhone 12 pro (128GB) - gray",
+      "url": "https://d28i4xct2kl5lp.cloudfront.net/product_images/1573710978.49.jpg",
+      "quantity": 1,
+      "userId": "dda5",
+      "productId": "f036"
+    },
+    {
+      "id": "366b",
+      "name": "i phone",
+      "price": "60000",
+      "color": "yellow",
+      "category": "cell phone",
+      "discription": "Apple iPhone 6 (128GB) - yellow",
+      "url": "https://telecomtalk.info/wp-content/uploads/2022/09/how-you-can-buy-iphone-14-under-1024x683.jpg",
+      "quantity": 1,
+      "userId": "dda5",
+      "productId": "df14"
+    },
+    {
+      "id": "1046",
+      "name": "i phone",
+      "price": "60000",
+      "color": "yellow",
+      "category": "cell phone",
+      "discription": "Apple iPhone 6 (128GB) - yellow",
+      "url": "https://telecomtalk.info/wp-content/uploads/2022/09/how-you-can-buy-iphone-14-under-1024x683.jpg",
+      "quantity": 1,
+      "userId": "dda5",
+      "productId": "df14"
+    },
+    {
+      "id": "caa4",
+      "name": "i phone 12 pro",
+      "price": "120000",
+      "color": "gray",
+      "category": "cell phone",
+      "discription": "Apple iPhone 12 pro (128GB) - gray",
+      "url": "https://d28i4xct2kl5lp.cloudfront.net/product_images/1573710978.49.jpg",
+      "quantity": 1,
+      "userId": "dda5",
+      "productId": "f036"
+    },
+    {
+      "id": "897b",
+      "name": "i phone 12 pro",
+      "price": "120000",
+      "color": "gray",
+      "category": "cell phone",
+      "discription": "Apple iPhone 12 pro (128GB) - gray",
+      "url": "https://d28i4xct2kl5lp.cloudfront.net/product_images/1573710978.49.jpg",
+      "quantity": 1,
+      "userId": "dda5",
+      "productId": "f036"
+    },
+    {
+      "id": "6253",
+      "name": "puma shoes",
+      "price": "3000",
+      "color": "black",
+      "category": "shoes",
+      "discription": "running shoes for men",
+      "url": "https://cdna.lystit.com/photos/puma/1001e715/puma-Charcoal-Gray-Blazing-Yellow-Axelion-Mesh-Mens-Training-Shoes.jpeg",
+      "quantity": 1,
+      "productId": "81ca",
+      "userId": null
+    },
+    {
+      "id": "b20f",
+      "name": "iphone 13 pro",
+      "price": "150000",
+      "color": "brown",
+      "category": "cell phone",
+      "discription": "Apple iPhone 13  pro (128GB) - black",
+      "url": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-1024x1024.jpg",
+      "quantity": 1,
+      "productId": "7d39",
+      "userId": null
+    },
+    {
+      "id": "563d",
+      "name": "i phone 12 pro",
+      "price": "120000",
+      "color": "gray",
+      "category": "cell phone",
+      "discription": "Apple iPhone 12 pro (128GB) - gray",
+      "url": "https://d28i4xct2kl5lp.cloudfront.net/product_images/1573710978.49.jpg",
+      "quantity": 1,
+      "userId": "dda5",
+      "productId": "f036"
     }
   ],
   "order": [

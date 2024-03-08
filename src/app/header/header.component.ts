@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { json } from 'express';
 import { ProductService } from '../services/product.service';
+import { SellerService } from '../services/seller.service';
+import { UserService } from '../services/user.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -12,9 +14,9 @@ export class HeaderComponent implements OnInit {
   sellerName: string = "";
   searchResult: any[] | undefined;
   userName: any;
-  cartItem=0;
+  cartItem = 0;
 
-  constructor(private route: Router, private product: ProductService) {
+  constructor(private route: Router, private product: ProductService, private sellerService:SellerService,private userService:UserService) {
   }
 
   ngOnInit(): void {
@@ -23,7 +25,7 @@ export class HeaderComponent implements OnInit {
         // console.log
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
           let sellerStore = localStorage.getItem('seller');
-          let sellerData = sellerStore ? JSON.parse(sellerStore):null;
+          let sellerData = sellerStore ? JSON.parse(sellerStore) : null;
           this.sellerName = sellerData[0].name;
           console.log("sellerNamee", this.sellerName);
           this.menuType = "seller";
@@ -32,7 +34,7 @@ export class HeaderComponent implements OnInit {
           // let userData = userStore && JSON.parse(userStore);
           let userData = userStore ? JSON.parse(userStore) : null;
 
-          console.log("userdata",userData)
+          // console.log("userdata",userData)
           this.userName = userData[0].name;
           this.menuType = "user";
           this.product.getCartList(userData.id)
@@ -43,14 +45,26 @@ export class HeaderComponent implements OnInit {
       }
 
     })
+    
+    // Subscribe to the sign-up success event from SellerService
+    this.sellerService.signUpSuccess.subscribe(() => {
+      this.menuType = 'seller'; // Update menu type after sign-up
+    });
+    
+    this.userService.signUpSuccess.subscribe(() => {
+      this.menuType = 'user'; // Update menu type after sign-up
+    });
 
-    let cartData=localStorage.getItem('localCart');
-    if(cartData){
-      this.cartItem=JSON.parse(cartData).length;
+    let cartData = localStorage.getItem('localCart');
+
+    if (cartData) {
+      this.cartItem = JSON.parse(cartData).length;
+      console.log("cartItemm", this.cartItem)
     }
-
-    this.product.cartData.subscribe((result)=>{
-      this.cartItem=result.length;
+    
+    this.product.cartData.subscribe((result) => {
+      console.log("resultt", result)
+      this.cartItem = result.length;
     })
   }
 
