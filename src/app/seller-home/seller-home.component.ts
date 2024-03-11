@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { faTrash, faUserPen } from '@fortawesome/free-solid-svg-icons';
+import { SellerService } from '../services/seller.service';
 
 @Component({
   selector: 'app-seller-home',
@@ -13,11 +14,12 @@ export class SellerHomeComponent implements OnInit {
   icon1 = faTrash;
   icon2 = faUserPen;
 
-  constructor(private product: ProductService) {
+  constructor(private product: ProductService, private sellerService: SellerService) {
 
   }
   ngOnInit(): void {
     this.list();
+    console.log("hello")
   }
 
   deleteProduct(id: number) {
@@ -33,18 +35,40 @@ export class SellerHomeComponent implements OnInit {
   }
 
   list() {
-    const data=localStorage.getItem('seller');
-    if(data){
-      const sellerData=JSON.parse(data);
-      this.productList=sellerData;
+    const data = localStorage.getItem('seller');
+    if (data) {
+      const sellerData = JSON.parse(data);
+      this.productList = sellerData;
+      console.log("mmm", this.productList)
     }
-    this.product.productList(this.productList)
+
+    // this.sellerService.signInSuccess.subscribe(() => {
+
+      this.product.productList(this.productList)
+        .subscribe((result) => {
+          if (result) {
+            console.log("mm", result)
+            this.productList = result
+
+          }
+        })
+
+    // });
+
+
+
+    this.sellerService.signUpSuccess.subscribe(() => {
+
+      this.product.onSignUpProductList(this.productList)
     .subscribe((result) => {
       if (result) {
+        console.log("mm",result)
         this.productList = result
-        
+
       }
     })
+        
+    });
   }
 
 }

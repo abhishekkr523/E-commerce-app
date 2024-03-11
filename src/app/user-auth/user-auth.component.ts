@@ -30,8 +30,9 @@ export class UserAuthComponent {
       console.log("result", result);
       if (result && result.body && result.body.length) {
         console.log("user login success");
-        localStorage.setItem('users', JSON.stringify(result.body))
+        localStorage.setItem('users', JSON.stringify(result.body[0]))
         this.router.navigate(['/'],)
+        this.localCartToRemoteCart()
       } else {
         console.log("user login fail");
         this.user.isLoginError.emit(true)
@@ -43,7 +44,7 @@ export class UserAuthComponent {
       }
     })
 
-    this.localCartToRemoteCart()
+
 
   }
   openLogin() {

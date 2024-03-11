@@ -1,47 +1,74 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { SellerService } from '../services/seller.service';
 
 @Component({
   selector: 'app-seller-add-product',
   templateUrl: './seller-add-product.component.html',
   styleUrl: './seller-add-product.component.scss'
 })
-export class SellerAddProductComponent implements OnInit{
-addProductMessage:string|undefined;
-userName:any;
-@ViewChild('addProduct') addProductForm: NgForm | undefined; // ViewChild to get the form reference
+export class SellerAddProductComponent implements OnInit {
+  addProductMessage: string | undefined;
+  userEmail: any;
+  @ViewChild('addProduct') addProductForm: NgForm | undefined; // ViewChild to get the form reference
 
-constructor(private product:ProductService){
-
-}
-ngOnInit(): void {
-  const sellerDataString = localStorage.getItem('seller');
-  if (sellerDataString) {
-    const sellerData = JSON.parse(sellerDataString);
-    this.userName = sellerData[0].name;
-    console.log("pp",this.userName)
+  constructor(private product: ProductService, private route: Router, private sellerService: SellerService) {
 
   }
-}
+  ngOnInit(): void {
+    const sellerDataString = localStorage.getItem('seller');
+
+
+    // this.sellerService.signInSuccess.subscribe(() => {
+    // if (sellerDataString) {
+    //   const sellerData = JSON.parse(sellerDataString);
+    //   this.userEmail = sellerData[0].email;
+    //   console.log("pp",this.userEmail)
+
+    // }
+    // });
+
+    // this.sellerService.signUpSuccess.subscribe(() => {
+    if (sellerDataString) {
+      const sellerData = JSON.parse(sellerDataString);
+      this.userEmail = sellerData.email;
+      console.log("pp", this.userEmail)
+
+    }
+    // });
+
+  }
 
 
 
-  submit(data: any){
-    console.log("product info",data);
-    this.product.addProduct(data).subscribe((result)=>{
-      console.log("product result",result);
-      if(result){
-        this.addProductMessage="Product is successfully added";
+  submit(data: any) {
+    console.log("product info", data);
+    this.product.addProduct(data).subscribe((result) => {
+      console.log("product result", result);
+      if (result) {
+        this.addProductMessage = "Product is successfully added";
+
+        this.product.cartData.emit(data);
+        this.timer();
+        
         if (this.addProductForm) {
           this.addProductForm.resetForm(); // Reset the form
         }
 
       }
-      setTimeout(() => {
-        this.addProductMessage = undefined;
-      }, 3000)
+     
     })
-    
+
+   
+
+  }
+  timer(){
+    setTimeout(() => {
+      this.addProductMessage = undefined;
+      this.route.navigate(['seller-home'])
+    }, 1000)
+
   }
 }

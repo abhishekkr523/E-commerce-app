@@ -4,20 +4,20 @@
     <h4 style="color: green;">{{addProductMessage}}</h4>
     <form #addProduct="ngForm" (ngSubmit)="submit(addProduct.value)" class="example-form">
         <div class="input-field">
-            <input name="username" type="hidden" [(ngModel)]="userName">
+            <input name="userEmail" type="hidden" [(ngModel)]="userEmail">
 
         </div>
         <div class="input-field">
             <input ngModel name="name" placeholder="Enter Product Name" required minlength="3" maxlength="50">
-            <div *ngIf="addProduct.controls['name'].errors?.['required'] && (addProduct.controls['name'].dirty || addProduct.controls['name'].touched)"
+            <div *ngIf="addProduct.controls['name'] && addProduct.controls['name'].errors?.['required'] && (addProduct.controls['name'].dirty || addProduct.controls['name'].touched)"
                 class="error-message">
                 <span>Product name is required.</span>
             </div>
-            <div *ngIf="addProduct.controls['name'].errors?.['minlength'] && (addProduct.controls['name'].dirty || addProduct.controls['name'].touched)"
+            <div *ngIf="addProduct.controls['name'] && addProduct.controls['name'].errors?.['minlength'] && (addProduct.controls['name'].dirty || addProduct.controls['name'].touched)"
                 class="error-message">
                 <span>Product name should be at least 3 characters.</span>
             </div>
-            <div *ngIf="addProduct.controls['name'].errors?.['maxlength'] && (addProduct.controls['name'].dirty || addProduct.controls['name'].touched)"
+            <div *ngIf="addProduct.controls['name'] && addProduct.controls['name'].errors?.['maxlength'] && (addProduct.controls['name'].dirty || addProduct.controls['name'].touched)"
                 class="error-message">
                 <span>Product name should be at most 50 characters.</span>
             </div>
@@ -25,11 +25,11 @@
         
         <div class="input-field">
             <input type="number" placeholder="Enter Product Price" ngModel name="price" required min="0">
-            <div *ngIf="addProduct.controls['price'].errors?.['required'] && (addProduct.controls['price'].dirty || addProduct.controls['price'].touched)"
+            <div *ngIf="addProduct.controls['price'] && addProduct.controls['price'].errors?.['required'] && (addProduct.controls['price'].dirty || addProduct.controls['price'].touched)"
                  class="error-message">
                 <span>Price is required.</span>
             </div>
-            <div *ngIf="addProduct.controls['price'].errors?.['min'] && (addProduct.controls['price'].dirty || addProduct.controls['price'].touched)"
+            <div *ngIf="addProduct.controls['price'] && addProduct.controls['price'].errors?.['min'] && (addProduct.controls['price'].dirty || addProduct.controls['price'].touched)"
                  class="error-message">
                 <span>Price cannot be negative.</span>
             </div>
@@ -37,15 +37,15 @@
         
         <div class="input-field">
             <input type="text" placeholder="Enter Product Color" ngModel name="color" required minlength="2" maxlength="50">
-            <div *ngIf="addProduct.controls['color'].errors?.['required'] && (addProduct.controls['color'].dirty || addProduct.controls['color'].touched)"
+            <div *ngIf="addProduct.controls['color'] && addProduct.controls['color'].errors?.['required'] && (addProduct.controls['color'].dirty || addProduct.controls['color'].touched)"
                 class="error-message">
                 <span>Color is required.</span>
             </div>
-            <div *ngIf="addProduct.controls['color'].errors?.['minlength'] && (addProduct.controls['color'].dirty || addProduct.controls['color'].touched)"
+            <div *ngIf=" addProduct.controls['color'] && addProduct.controls['color'].errors?.['minlength'] && (addProduct.controls['color'].dirty || addProduct.controls['color'].touched)"
                 class="error-message">
                 <span>Color should be at least 2 characters.</span>
             </div>
-            <div *ngIf="addProduct.controls['color'].errors?.['maxlength'] && (addProduct.controls['color'].dirty || addProduct.controls['color'].touched)"
+            <div *ngIf="addProduct.controls['color'] && addProduct.controls['color'].errors?.['maxlength'] && (addProduct.controls['color'].dirty || addProduct.controls['color'].touched)"
                 class="error-message">
                 <span>Color should be at most 50 characters.</span>
             </div>
@@ -53,15 +53,15 @@
         
         <div class="input-field">
             <input ngModel name="category" placeholder="Enter Product Category" minlength="3" maxlength="50" required>
-            <div *ngIf="addProduct.controls['category'].errors?.['required'] && (addProduct.controls['category'].dirty || addProduct.controls['category'].touched)"
+            <div *ngIf=" addProduct.controls['category'] && addProduct.controls['category'].errors?.['required'] && (addProduct.controls['category'].dirty || addProduct.controls['category'].touched)"
                 class="error-message">
                 <span>Category is required.</span>
             </div>
-            <div *ngIf="addProduct.controls['category'].errors?.['minlength'] && (addProduct.controls['category'].dirty || addProduct.controls['category'].touched)"
+            <div *ngIf="addProduct.controls['category'] && addProduct.controls['category'].errors?.['minlength'] && (addProduct.controls['category'].dirty || addProduct.controls['category'].touched)"
                 class="error-message">
                 <span>Category should be at least 3 characters.</span>
             </div>
-            <div *ngIf="addProduct.controls['category'].errors?.['maxlength'] && (addProduct.controls['category'].dirty || addProduct.controls['category'].touched)"
+            <div *ngIf="addProduct.controls['category'] && addProduct.controls['category'].errors?.['maxlength'] && (addProduct.controls['category'].dirty || addProduct.controls['category'].touched)"
                 class="error-message">
                 <span>Category should be at most 50 characters.</span>
             </div>
@@ -70,7 +70,7 @@
         
         <div class="input-field">
             <textarea type="text" placeholder="Enter Product Description" ngModel name="description" required></textarea>
-            <div *ngIf="addProduct.controls['description'].errors?.['required'] && (addProduct.controls['description'].dirty || addProduct.controls['description'].touched)"
+            <div *ngIf="addProduct.controls['description'] && addProduct.controls['description'].errors?.['required'] && (addProduct.controls['description'].dirty || addProduct.controls['description'].touched)"
                 class="error-message">
                 <span>Description is required.</span>
             </div>
@@ -78,11 +78,11 @@
         
         <div class="input-field">
             <input type="text" placeholder="Enter Product Image URL" ngModel name="url" required pattern="https?://.+">
-            <div *ngIf="addProduct.controls['url'].errors?.['required'] && (addProduct.controls['url'].dirty || addProduct.controls['url'].touched)"
+            <div *ngIf="addProduct.controls['url'] && addProduct.controls['url'].errors?.['required'] && (addProduct.controls['url'].dirty || addProduct.controls['url'].touched)"
                  class="error-message">
                 <span>Product Image URL is required.</span>
             </div>
-            <div *ngIf="addProduct.controls['url'].errors?.['pattern'] && (addProduct.controls['url'].dirty || addProduct.controls['url'].touched)"
+            <div *ngIf="addProduct.controls['url'] && addProduct.controls['url'].errors?.['pattern'] && (addProduct.controls['url'].dirty || addProduct.controls['url'].touched)"
                  class="error-message">
                 <span>Invalid URL format.</span>
             </div>

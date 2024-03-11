@@ -1,10 +1,12 @@
-
 <div class="main">
     <h2>Update Product</h2>
     <h4 style="color: green;">{{productMessage}}</h4>
     <form #updateProduct="ngForm" (ngSubmit)="submit(updateProduct.value)" class="example-form">
         <div class="input-field">
             <input ngModel="{{productData.id}}" name="id" type="hidden">
+        </div>
+        <div class="input-field">
+            <input ngModel="{{productData.userEmail}}" name="userEmail" type="hidden">
         </div>
         <div class="input-field">
             <input ngModel="{{productData.name}}" name="name" placeholder="Enter Product Name">
@@ -19,12 +21,13 @@
             <input ngModel="{{productData.category}}" name="category" placeholder="Enter Product Category">
         </div>
         <div class="input-field">
-            <textarea type="text" placeholder="Enter Product Discription" ngModel="{{productData.discription}}" name="discription">
+            <textarea type="text" placeholder="Enter Product Discription" ngModel="{{productData.discription}}"
+                name="discription">
         </textarea>
         </div>
         <div class="input-field">
             <input type="text" placeholder="Enter Product Umage URL" ngModel="{{productData.url}}" name="url">
         </div>
-        <button type="submit" (click)="redirect()">Update Product</button>
+        <button type="submit">Update Product</button>
     </form>
 </div>

@@ -16,8 +16,8 @@ export class SellersAuthComponent implements OnInit {
   dat: any
   ngOnInit(): void {
     this.seller.reloadSeller();
-     // Subscribe to the sign-up success event
-     this.seller.signUpSuccess.subscribe(() => {
+    // Subscribe to the sign-up success event
+    this.seller.signUpSuccess.subscribe(() => {
       // Update the menu type after successful sign-up
       this.router.navigate(['seller-home']);
     });
@@ -27,7 +27,7 @@ export class SellersAuthComponent implements OnInit {
   }
   login(data: signUp) {
     this.authError = "";
-    this.seller.userLogin(data);
+    this.seller.sellerLogin(data);
     this.seller.isLoginError.subscribe((isError) => {
       if (isError) {
         this.authError = "Email and Password is Incorrect"

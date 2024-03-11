@@ -11,10 +11,15 @@ export class ProductService {
   addProduct(data: any) {
     return this.http.post('http://localhost:3000/product', data);
   }
+
+
   productList(data:any) {
-    console.log("data",data)
-    return this.http.get<any>(`http://localhost:3000/product?username=${data[0].name}`);
+    return this.http.get<any>(`http://localhost:3000/product?userEmail=${data.email}`);
   }
+  onSignUpProductList(data:any) {
+    return this.http.get<any>(`http://localhost:3000/product?userEmail=${data.email}`);
+  }
+
 
   deleteProduct(id: number) {
     return this.http.delete(`http://localhost:3000/product/${id}`);
@@ -79,6 +84,7 @@ export class ProductService {
   currentCard() {
     let userStore = localStorage.getItem('users');
     let userData = userStore && JSON.parse(userStore);
+    console.log("mmm",userData)
     return this.http.get<any[]>('http://localhost:3000/cart?userId=' + userData.id)
   }
   order(data: any) {
@@ -87,6 +93,7 @@ export class ProductService {
   orderList() {
     let userStore = localStorage.getItem('users');
     let userData = userStore && JSON.parse(userStore);
+    console.log("ff",userData)
     return this.http.get<any>('http://localhost:3000/order?userId=' + userData.id)
   }
   deleteCartItems(cartId:number){

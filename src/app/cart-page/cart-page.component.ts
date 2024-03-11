@@ -40,7 +40,7 @@ export class CartPageComponent implements OnInit {
   loadDetails() {
     this.product.currentCard().subscribe((result) => {
       this.cartData = result;
-      console.log("result", result)
+      console.log("resulttt", result)
       let price = 0;
       result.forEach((item) => { price += (+item.price * item.quantity); });
       this.cartSummary.price = price;

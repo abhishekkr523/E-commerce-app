@@ -14,6 +14,7 @@ export class UserService {
     this.http.post('http://localhost:3000/users', user, { observe: 'response' }).subscribe((result) => {
       if(result){
       localStorage.setItem('users', JSON.stringify(result.body));
+      localStorage.setItem('menuType', 'user'); // Set menu type in local storage
       this.signUpSuccess.emit(); // Emit sign-up success event
       this.router.navigate(['/'],);
       }

@@ -45,6 +45,12 @@ const routes: Routes = [
   {
     path:'my-orders', component:MyOrdersComponent
   },
+  {
+    path:'seller-auth', component:SellersAuthComponent
+  },
+  {
+    path:'user-auth', component:UserAuthComponent
+  },
 ];
 
 @NgModule({

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../services/product.service';
+import { emit } from 'process';
 
 @Component({
   selector: 'app-product-details',
@@ -27,7 +28,7 @@ export class ProductDetailsComponent implements OnInit {
         items = items.filter((item: any) => productId == item.id.toString());
         if (items.length) {
 
-          this.removeCart = true;
+          this.removeCart = false;
         } else {
           this.removeCart = false;
         }
@@ -59,26 +60,29 @@ export class ProductDetailsComponent implements OnInit {
     }
   }
   addToCart() {
+    console.log("ooo",this.productData)
     if (this.productData) {
       this.productData.quantity = this.productQuantity;
       if (!localStorage.getItem('users')) {
         this.product.localAddToCart(this.productData);
-        this.removeCart = true;
+        this.removeCart = false;
+        
       } else {
         console.log("user is log in");
         let user = localStorage.getItem('users');
-        let userId = user && JSON.parse(user)[0].id;
-        console.log("usereIdd",userId)
+        let userId = user && JSON.parse(user).id;
         let cartData: any = { ...this.productData, userId, productId: this.productData.id, }
         delete cartData.id;
+        console.log("nnn",cartData)
         this.product.addToCart(cartData).subscribe((result) => {
           if (result) {
             console.log("oo",result)
             this.product.getCartList(userId);
-            this.removeCart = true
+            this.removeCart = false
             alert("Product is added to cart");
           }
         })
+        
       }
 
     }
@@ -94,8 +98,10 @@ export class ProductDetailsComponent implements OnInit {
         let user = localStorage.getItem('users');
         let userId = user && JSON.parse(user).id;
         this.product.getCartList(userId);
+        this.cartData.emit(user);
       })
       this.removeCart = false;
+      
     }
   }
 }
