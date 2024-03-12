@@ -40,7 +40,6 @@ export class CheckoutComponent implements OnInit {
       this.product.order(orderData).subscribe((result) => {
         if (result) {
           this.ordersms = "your order has been placed"
-          // alert("Order placed");
           setTimeout(() => {
             this.route.navigate(['my-orders'])
             this.ordersms = undefined

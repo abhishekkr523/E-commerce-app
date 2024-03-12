@@ -15,13 +15,11 @@ export class HomeComponent implements OnInit{
   ngOnInit(): void {
     this.product.popularProduct()
     .subscribe((result)=>{
-      console.log("popularproduct",result);
       this.popularProduct=result;
     })
 
     this.product.trendyProduct()
     .subscribe((result)=>{
-      console.log("trendyproduct",result);
       this.trendyProduct=result;
     })
   }

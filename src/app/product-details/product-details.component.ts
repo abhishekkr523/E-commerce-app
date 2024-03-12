@@ -38,7 +38,6 @@ export class ProductDetailsComponent implements OnInit {
         let userId = user && JSON.parse(user).id;
         this.product.getCartList(userId);
         this.product.cartData.subscribe((result) => {
-          // let item = result.filter((item: any) => productId?.toString() === item.producId.toString());
           let item = result.filter((item: any) => item && productId && item.id && item.producId && productId === item.id.toString() && item.producId.toString());
 
 
@@ -73,10 +72,8 @@ export class ProductDetailsComponent implements OnInit {
         let userId = user && JSON.parse(user).id;
         let cartData: any = { ...this.productData, userId, productId: this.productData.id, }
         delete cartData.id;
-        console.log("nnn",cartData)
         this.product.addToCart(cartData).subscribe((result) => {
           if (result) {
-            console.log("oo",result)
             this.product.getCartList(userId);
             this.removeCart = false
             alert("Product is added to cart");

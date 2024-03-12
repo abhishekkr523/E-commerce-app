@@ -1,9 +1,10 @@
 <div *ngIf="!showLogin" class="main">
     <h2>Seller sign-up</h2>
     <form #data="ngForm" (ngSubmit)="signUp(data.value)" class="example-form">
-
+        <p>{{signup}}</p>
         <div class="input-field">
-            <input ngModel name="name" placeholder="Enter Name" required minlength="3" maxlength="50" pattern="[a-zA-Z ]*">
+            <input ngModel name="name" placeholder="Enter Name" required minlength="3" maxlength="50"
+                pattern="[a-zA-Z ]*">
             <div *ngIf="data.controls['name'] && data.controls['name'].errors?.['required'] && (data.controls['name'].dirty || data.controls['name'].touched)"
                 class="error-message">
                 <span>Name is required.</span>

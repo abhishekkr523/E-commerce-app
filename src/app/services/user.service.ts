@@ -6,50 +6,39 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class UserService {
-  isLoginError=new EventEmitter<boolean>(false);
+  isLoginError = new EventEmitter<boolean>(false);
   signUpSuccess = new EventEmitter<void>();
+  signUpFail = new EventEmitter<void>();
 
-  constructor(private http: HttpClient,private router:Router) { }
+  constructor(private http: HttpClient, private router: Router) { }
   userSignUp(user: any) {
-    this.http.post('http://localhost:3000/users', user, { observe: 'response' }).subscribe((result) => {
-      if(result){
-      localStorage.setItem('users', JSON.stringify(result.body));
-      localStorage.setItem('menuType', 'user'); // Set menu type in local storage
-      this.signUpSuccess.emit(); // Emit sign-up success event
-      this.router.navigate(['/'],);
+    this.http.get<any[]>(`http://localhost:3000/users?email=${user.email}`, { observe: 'response' }).subscribe((result: any) => {
+      if (result && result.body && result.body.length) {
+        this.signUpFail.emit();
+        this.router.navigate(['user-auth'],)
+      }
+
+      else {
+        this.http.post('http://localhost:3000/users', user, { observe: 'response' }).subscribe((result) => {
+          if (result) {
+            localStorage.setItem('users', JSON.stringify(result.body));
+            localStorage.setItem('menuType', 'user'); // Set menu type in local storage
+            this.signUpSuccess.emit(); // Emit sign-up success event
+            this.router.navigate(['/'],);
+          }
+        });
       }
     });
+
   }
 
 
-  // userLogin(data: any) {
-  //   this.http.get<any[]>(`http://localhost:3000/users?email=${data.email}&password=${data.password}`, { observe: 'response' }).subscribe((result:any) => {
-  //     console.log("result", result);
-  //     if(result && result.body){
-  //       localStorage.setItem('users', JSON.stringify(result.body[0]))
-  //       this.router.navigate(['/'],)
-  //       }
-      
-  // })}
-
-  userLogin(data: any){
+  userLogin(data: any) {
     return this.http.get(`http://localhost:3000/users?email=${data.email}&password=${data.password}`, { observe: 'response' })
-    // .subscribe((result:any) => {
-    //   console.log("result", result);
-    //   if(result && result.body && result.body.length){
-    //     console.log("user login success");
-    //     localStorage.setItem('users', JSON.stringify(result.body))
-    //   this.router.navigate(['/'],)
-    //   }else{
-    //     console.log("user login fail");
-    //     this.isLoginError.emit(true)
-    //   }
-    // });
   }
 
-
-  userAuthReload(){
-    if(localStorage.getItem('users')){
+  userAuthReload() {
+    if (localStorage.getItem('users')) {
       this.router.navigate(['/']);
     }
   }

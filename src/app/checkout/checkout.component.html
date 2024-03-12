@@ -1,5 +1,5 @@
 <div class="checkout">
-    <h1 >Check out</h1>
+    <h1>Check out</h1>
     <p style="color: green;">{{ordersms}}</p>
     <div class="main">
         <h2>Add shipping address</h2>
@@ -16,26 +16,28 @@
                 </div>
             </div>
             <div class="input-field">
-                <input type="text" placeholder="Enter user address" ngModel name="address" required minlength="5" maxlength="100">
+                <input type="text" placeholder="Enter user address" ngModel name="address" required minlength="5"
+                    maxlength="100">
                 <div *ngIf="orderDetails.controls['address'].errors?.['required'] && (orderDetails.controls['address'].dirty || orderDetails.controls['address'].touched)"
-                     class="error-message">
+                    class="error-message">
                     <span>Address is required.</span>
                 </div>
                 <div *ngIf="orderDetails.controls['address'].errors?.['minlength'] && (orderDetails.controls['address'].dirty || orderDetails.controls['address'].touched)"
-                     class="error-message">
+                    class="error-message">
                     <span>Address should be at least 5 characters.</span>
                 </div>
                 <div *ngIf="orderDetails.controls['address'].errors?.['maxlength'] && (orderDetails.controls['address'].dirty || orderDetails.controls['address'].touched)"
-                     class="error-message">
+                    class="error-message">
                     <span>Address should be at most 100 characters.</span>
                 </div>
             </div>
-            
+
             <div class="input-field">
-                <input type="text" placeholder="Enter contact details" ngModel name="contact" required minlength="5" maxlength="20">
+                <input type="number" placeholder="Enter contact number" ngModel name="contact" required minlength="5"
+                    maxlength="20">
                 <div *ngIf="orderDetails.controls['contact'].errors?.['required'] && (orderDetails.controls['contact'].dirty || orderDetails.controls['contact'].touched)"
                     class="error-message">
-                    <span>Contact details are required.</span>
+                    <span>Contact number is required.</span>
                 </div>
                 <div *ngIf="orderDetails.controls['contact'].errors?.['minlength'] && (orderDetails.controls['contact'].dirty || orderDetails.controls['contact'].touched)"
                     class="error-message">
@@ -46,8 +48,8 @@
                     <span>Contact details should be at most 20 characters.</span>
                 </div>
             </div>
-            
-            <button type="submit">Order Now</button>
+
+            <button type="submit" [disabled]="!orderDetails.valid">Order Now</button>
         </form>
 
     </div>

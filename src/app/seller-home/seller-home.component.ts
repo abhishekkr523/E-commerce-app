@@ -19,7 +19,9 @@ export class SellerHomeComponent implements OnInit {
   }
   ngOnInit(): void {
     this.list();
-    console.log("hello")
+    this.product.updateSellerHome.subscribe(()=>{
+      this.list();
+    })
   }
 
   deleteProduct(id: number) {
@@ -39,35 +41,27 @@ export class SellerHomeComponent implements OnInit {
     if (data) {
       const sellerData = JSON.parse(data);
       this.productList = sellerData;
-      console.log("mmm", this.productList)
     }
 
-    // this.sellerService.signInSuccess.subscribe(() => {
 
-      this.product.productList(this.productList)
+    this.product.productList(this.productList)
+      .subscribe((result) => {
+        if (result) {
+          this.productList = result
+
+        }
+      })
+
+    this.sellerService.signUpSuccess.subscribe(() => {
+
+      this.product.onSignUpProductList(this.productList)
         .subscribe((result) => {
           if (result) {
-            console.log("mm", result)
             this.productList = result
 
           }
         })
 
-    // });
-
-
-
-    this.sellerService.signUpSuccess.subscribe(() => {
-
-      this.product.onSignUpProductList(this.productList)
-    .subscribe((result) => {
-      if (result) {
-        console.log("mm",result)
-        this.productList = result
-
-      }
-    })
-        
     });
   }
 

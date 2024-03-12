@@ -6,6 +6,7 @@ import { EventEmitter, Injectable } from '@angular/core';
 })
 export class ProductService {
   cartData = new EventEmitter<any[] | []>();
+  updateSellerHome = new EventEmitter<void>();
   constructor(private http: HttpClient) { }
 
   addProduct(data: any) {
@@ -29,7 +30,6 @@ export class ProductService {
   }
   updateProduct(product: any) {
     return this.http.put<any>(`http://localhost:3000/product/${product.id}`, product);
-    // console.log("service",product)
   }
   popularProduct() {
     return this.http.get<any>(`http://localhost:3000/product?_limit=3`);
@@ -84,7 +84,6 @@ export class ProductService {
   currentCard() {
     let userStore = localStorage.getItem('users');
     let userData = userStore && JSON.parse(userStore);
-    console.log("mmm",userData)
     return this.http.get<any[]>('http://localhost:3000/cart?userId=' + userData.id)
   }
   order(data: any) {
@@ -93,7 +92,6 @@ export class ProductService {
   orderList() {
     let userStore = localStorage.getItem('users');
     let userData = userStore && JSON.parse(userStore);
-    console.log("ff",userData)
     return this.http.get<any>('http://localhost:3000/order?userId=' + userData.id)
   }
   deleteCartItems(cartId:number){

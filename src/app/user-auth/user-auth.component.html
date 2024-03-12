@@ -1,5 +1,6 @@
 <div *ngIf="!showLogin" class="main" style="    height: 55vh;">
     <h2>User sign-up</h2>
+    <p>{{signup}}</p>
     <form #data="ngForm" (ngSubmit)="signUp(data.value)" class="example-form">
         <div class="input-field">
             <input ngModel name="name" placeholder="Enter Name" required minlength="3" maxlength="50"

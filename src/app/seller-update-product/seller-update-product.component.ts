@@ -8,32 +8,31 @@ import { ProductService } from '../services/product.service';
   styleUrl: './seller-update-product.component.scss'
 })
 export class SellerUpdateProductComponent implements OnInit {
-  productData: undefined | any;
+  // productData: undefined | any ;
   productMessage: undefined | any;
+  productData: any = {}; // Initialize productData as an empty object
 
-  constructor(private route: ActivatedRoute, private product: ProductService,private router:Router) {
+  constructor(private route: ActivatedRoute, private product: ProductService, private router: Router) {
 
   }
   ngOnInit(): void {
     let productId = this.route.snapshot.paramMap.get('id');
     productId && this.product.getProduct(productId).subscribe((data) => {
       this.productData = data;
-      console.log("u",this.productData)
     })
   }
 
   submit(data: any) {
-    console.log("vv",data)
-    this.product.updateProduct(data).subscribe((result:any) => {
+    this.product.updateProduct(data).subscribe((result: any) => {
       if (result) {
-        console.log("nn",result)
         this.productMessage = "Product has updated";
       }
     });
     this.redirect()
   }
-  redirect(){
+  redirect() {
     this.router.navigate(['seller-home']);
+    this.product.updateSellerHome.emit();
   }
-  
+
 }

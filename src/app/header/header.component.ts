@@ -22,24 +22,18 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.route.events.subscribe((val: any) => {
       if (val.url) {
-        // console.log
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
           let sellerStore = localStorage.getItem('seller');
           let sellerData = sellerStore ? JSON.parse(sellerStore) : null;
           this.sellerName = sellerData.name;
-          console.log("sellerNamee", this.sellerName);
           this.menuType = "seller";
         } else if (localStorage.getItem('users')) {
           let userStore = localStorage.getItem('users');
-          // let userData = userStore && JSON.parse(userStore);
           let userData = userStore ? JSON.parse(userStore) : null;
-
-          // console.log("userdata",userData)
           this.userName = userData.name;
           this.menuType = "user";
           this.product.getCartList(userData.id)
         } else {
-          console.log("outside seller");
           this.menuType = 'default'
         }
       }
@@ -69,13 +63,10 @@ export class HeaderComponent implements OnInit {
 
     if (cartData) {
       this.cartItem = JSON.parse(cartData).length;
-      console.log("cartItemm", this.cartItem)
     }
 
     this.product.cartData.subscribe((result) => {
-      console.log("resultttt", result)
       this.cartItem = result.length;
-      console.log("resultttt", this.cartItem)
     })
   }
   
@@ -96,9 +87,7 @@ export class HeaderComponent implements OnInit {
   searchProduct(query: KeyboardEvent) {
     if (query) {
       const element = query.target as HTMLInputElement;
-      console.log("element", element.value);
       this.product.searchProduct(element.value).subscribe((result) => {
-        console.log("searchProduct", result);
         this.searchResult = result;
       })
     }

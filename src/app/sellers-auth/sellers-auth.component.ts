@@ -10,6 +10,7 @@ import { signUp } from '../data-type';
 export class SellersAuthComponent implements OnInit {
   showLogin = false;
   authError: string = "";
+  signup: string | undefined
 
   constructor(private seller: SellerService, private router: Router) {
   }
@@ -21,9 +22,12 @@ export class SellersAuthComponent implements OnInit {
       // Update the menu type after successful sign-up
       this.router.navigate(['seller-home']);
     });
+    this.seller.signUpFail.subscribe(() => {
+      this.signup = "This email is already taken. Try another."
+    })
   }
   signUp(data: signUp): void {
-    this.seller.userSignUp(data)
+    this.seller.userSignUp(data);
   }
   login(data: signUp) {
     this.authError = "";
@@ -40,4 +44,5 @@ export class SellersAuthComponent implements OnInit {
   openSignUp() {
     this.showLogin = false
   }
+
 }

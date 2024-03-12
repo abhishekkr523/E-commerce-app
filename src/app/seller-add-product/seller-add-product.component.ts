@@ -19,25 +19,11 @@ export class SellerAddProductComponent implements OnInit {
   }
   ngOnInit(): void {
     const sellerDataString = localStorage.getItem('seller');
-
-
-    // this.sellerService.signInSuccess.subscribe(() => {
-    // if (sellerDataString) {
-    //   const sellerData = JSON.parse(sellerDataString);
-    //   this.userEmail = sellerData[0].email;
-    //   console.log("pp",this.userEmail)
-
-    // }
-    // });
-
-    // this.sellerService.signUpSuccess.subscribe(() => {
+    
     if (sellerDataString) {
       const sellerData = JSON.parse(sellerDataString);
       this.userEmail = sellerData.email;
-      console.log("pp", this.userEmail)
-
     }
-    // });
 
   }
 
