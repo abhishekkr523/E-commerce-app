@@ -16,8 +16,8 @@
                 </div>
             </div>
             <div class="input-field">
-                <input type="text" placeholder="Enter user address" ngModel name="address" required minlength="5"
-                    maxlength="100">
+                <textarea style="width: 100%;" type="text" placeholder="Enter user address" ngModel name="address" required minlength="5"
+                    maxlength="100"></textarea>
                 <div *ngIf="orderDetails.controls['address'].errors?.['required'] && (orderDetails.controls['address'].dirty || orderDetails.controls['address'].touched)"
                     class="error-message">
                     <span>Address is required.</span>

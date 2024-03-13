@@ -4,6 +4,8 @@ import { login, signUp } from '../data-type';
 import { BehaviorSubject } from 'rxjs';
 import { json } from 'stream/consumers';
 import { Router } from '@angular/router';
+import { baseurl } from './constant';
+import { endpoints } from './constant';
 @Injectable({
   providedIn: 'root'
 })
@@ -18,24 +20,15 @@ export class SellerService {
 
   constructor(private http: HttpClient,private router:Router) { }
 
-  // userSignUp(data: signUp) {
-  //   this.http.post('http://localhost:3000/seller', data, { observe: 'response' }).subscribe((result) => {
-  //     this.isSellerLoggedIn.next(true);
-  //     localStorage.setItem('seller', JSON.stringify(result.body));
-  //     console.log("result.body",result.body);
-  //     localStorage.setItem('menuType', 'seller'); // Set menu type in local storage
-  //     this.signUpSuccess.emit(); // Emit the sign-up success event
-  //     this.router.navigate(['seller-home']);
-  //   });
-  // }
+  
   userSignUp(data: signUp) {
-    this.http.get(`http://localhost:3000/seller?email=${data.email}`, { observe: 'response' }).subscribe((result:any) => {
+    this.http.get(`${baseurl}${endpoints.seller}?email=${data.email}`, { observe: 'response' }).subscribe((result:any) => {
       if(result && result.body && result.body.length){
         
         this.signUpFail.emit();
       this.router.navigate(['seller-auth'],)
       }else{
-        this.http.post('http://localhost:3000/seller', data, { observe: 'response' }).subscribe((result) => {
+        this.http.post(`${baseurl}${endpoints.seller}`, data, { observe: 'response' }).subscribe((result) => {
       this.isSellerLoggedIn.next(true);
       localStorage.setItem('seller', JSON.stringify(result.body));
       localStorage.setItem('menuType', 'seller'); // Set menu type in local storage
@@ -54,7 +47,7 @@ export class SellerService {
   }
 
   sellerLogin(data: login){
-    this.http.get(`http://localhost:3000/seller?email=${data.email}&password=${data.password}`, { observe: 'response' }).subscribe((result:any) => {
+    this.http.get(`${baseurl}${endpoints.seller}?email=${data.email}&password=${data.password}`, { observe: 'response' }).subscribe((result:any) => {
       this.signInSuccess.emit();
       if(result && result.body && result.body.length){
         localStorage.setItem('seller', JSON.stringify(result.body[0]))

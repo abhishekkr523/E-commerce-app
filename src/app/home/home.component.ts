@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit{
       this.popularProduct=result;
     })
 
-    this.product.trendyProduct()
+    this.product.trendyProduct( "?_limit=8")
     .subscribe((result)=>{
       this.trendyProduct=result;
     })

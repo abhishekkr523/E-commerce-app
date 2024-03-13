@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
   userName: any;
   cartItem = 0;
 
+
   constructor(private route: Router, private product: ProductService, private sellerService: SellerService, private userService: UserService) {
   }
 
@@ -66,24 +67,33 @@ export class HeaderComponent implements OnInit {
     }
 
     this.product.cartData.subscribe((result) => {
+      console.log("resulttb", result)
       this.cartItem = result.length;
     })
+
+
   }
-  
+
 
   sellerLogout() {
     localStorage.removeItem('seller');
-    this.route.navigate(['/sellers-auth']);
     localStorage.removeItem('menuType');
-    this.route.navigate(['seller-auth']);
+
+    this.route.navigate(['/seller']);
+    let data = JSON.parse(localStorage.getItem("localCart") || "null")?.length;
+    this.cartItem = data;
   }
+
   userLogout() {
     localStorage.removeItem('users');
-    this.route.navigate(['/user-auth']);
     localStorage.removeItem('menuType');
-    this.product.cartData.emit([]);
-    this.route.navigate(['user-auth'])
+    this.route.navigate(['/user-auth']);
+
+    let data = JSON.parse(localStorage.getItem("localCart") || "null")?.length;
+    this.cartItem = data;
+
   }
+
   searchProduct(query: KeyboardEvent) {
     if (query) {
       const element = query.target as HTMLInputElement;

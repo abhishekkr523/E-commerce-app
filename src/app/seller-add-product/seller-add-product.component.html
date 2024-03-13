@@ -69,7 +69,7 @@
 
 
         <div class="input-field">
-            <textarea type="text" placeholder="Enter Product Description" ngModel name="description"
+            <textarea class="form-control" style="width: 100%;" type="text" placeholder="Enter Product Description" ngModel name="description"
                 required></textarea>
             <div *ngIf="addProduct.controls['description'] && addProduct.controls['description'].errors?.['required'] && (addProduct.controls['description'].dirty || addProduct.controls['description'].touched)"
                 class="error-message">

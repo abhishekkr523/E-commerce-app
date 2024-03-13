@@ -23,7 +23,7 @@
             <li routerLink="/">Home</li>
             <li routerLink="">{{userName | titlecase}}</li>
             <li> <a routerLink="/my-orders">My Order</a></li>
-            <li> <a (click)="userLogout()" routerLink="/user-auth">Logout</a></li>
+            <li> <a (click)="userLogout()">Logout</a></li>
             <!-- <li> <a [routerLink]="cartItem>0?'/cart-page':null">Cart({{cartItem}})</a></li> -->
             <li> <a routerLink="/cart-page">Cart({{cartItem}})</a></li>
         </ul>

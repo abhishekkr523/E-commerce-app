@@ -59,7 +59,6 @@ export class ProductDetailsComponent implements OnInit {
     }
   }
   addToCart() {
-    console.log("ooo",this.productData)
     if (this.productData) {
       this.productData.quantity = this.productQuantity;
       if (!localStorage.getItem('users')) {

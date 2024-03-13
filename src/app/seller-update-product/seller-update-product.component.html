@@ -109,7 +109,7 @@
 
 
         <div class="input-field">
-                <textarea type="text" placeholder="Enter Product Discription" [(ngModel)]="productData.description" name="description" required></textarea>
+                <textarea style="width: 100%;" type="text" placeholder="Enter Product Description" [(ngModel)]="productData.description" name="description" required></textarea>
 
             <div *ngIf="updateProduct.controls['description'] && updateProduct.controls['description'].errors?.['required'] && (updateProduct.controls['description'].dirty || updateProduct.controls['description'].touched)"
                 class="error-message">

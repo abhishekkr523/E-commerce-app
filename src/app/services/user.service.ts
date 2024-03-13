@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { baseurl,endpoints } from './constant';
 
 @Injectable({
   providedIn: 'root'
@@ -12,14 +13,14 @@ export class UserService {
 
   constructor(private http: HttpClient, private router: Router) { }
   userSignUp(user: any) {
-    this.http.get<any[]>(`http://localhost:3000/users?email=${user.email}`, { observe: 'response' }).subscribe((result: any) => {
+    this.http.get<any[]>(`${baseurl}${endpoints.users}?email=${user.email}`, { observe: 'response' }).subscribe((result: any) => {
       if (result && result.body && result.body.length) {
         this.signUpFail.emit();
         this.router.navigate(['user-auth'],)
       }
 
       else {
-        this.http.post('http://localhost:3000/users', user, { observe: 'response' }).subscribe((result) => {
+        this.http.post(`${baseurl}${endpoints.users}`, user, { observe: 'response' }).subscribe((result) => {
           if (result) {
             localStorage.setItem('users', JSON.stringify(result.body));
             localStorage.setItem('menuType', 'user'); // Set menu type in local storage
@@ -34,7 +35,7 @@ export class UserService {
 
 
   userLogin(data: any) {
-    return this.http.get(`http://localhost:3000/users?email=${data.email}&password=${data.password}`, { observe: 'response' })
+    return this.http.get(`${baseurl}${endpoints.users}?email=${data.email}&password=${data.password}`, { observe: 'response' })
   }
 
   userAuthReload() {
